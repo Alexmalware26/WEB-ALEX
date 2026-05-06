@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi portafolio profesional con servicios, widgets y enlaces">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Mi Portafolio Profesional</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">ROA Site</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#widgets" class="nav-link">Widgets</a></li>
+                <li><a href="#enlaces" class="nav-link">Enlaces</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>¡Bienvenido!</h1>
+            <p>Ofrezco servicios profesionales de alta calidad</p>
+            <button class="btn-primary"
+                onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})">
+                Descubre mis servicios
+            </button>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Mis Servicios</h2>
+            <div class="servicios-grid" id="servicios-grid">
+                <!-- Los servicios se cargarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Widgets -->
+    <section id="widgets" class="widgets">
+        <div class="container">
+            <h2>Widgets</h2>
+            <div class="widgets-container" id="widgets-container">
+                <!-- Los widgets se cargarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlaces -->
+    <section id="enlaces" class="enlaces">
+        <div class="container">
+            <h2>Mis Enlaces</h2>
+            <div class="enlaces-grid" id="enlaces-grid">
+                <!-- Los enlaces se cargarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contacto-form" class="contacto-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mi Portafolio Profesional. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Panel de administración (modo desarrollo) -->
+    <div class="admin-panel" id="admin-panel">
+        <button class="toggle-admin" onclick="toggleAdmin()">⚙️</button>
+        <div class="admin-content" id="admin-content">
+            <h3>Panel de Control</h3>
+            <div class="admin-section">
+                <h4>Agregar Servicio</h4>
+                <input type="text" id="servicio-nombre" placeholder="Nombre del servicio">
+                <textarea id="servicio-desc" placeholder="Descripción" rows="3"></textarea>
+                <input type="text" id="servicio-icon" placeholder="Icono (ej: star)">
+                <button onclick="agregarServicio()">Añadir</button>
+            </div>
+            <div class="admin-section">
+                <h4>Agregar Widget</h4>
+                <input type="text" id="widget-titulo" placeholder="Título del widget">
+                <input type="text" id="widget-contenido" placeholder="Contenido">
+                <button onclick="agregarWidget()">Añadir</button>
+            </div>
+            <div class="admin-section">
+                <h4>Agregar Enlace</h4>
+                <input type="text" id="enlace-titulo" placeholder="Título del enlace">
+                <input type="url" id="enlace-url" placeholder="URL">
+                <input type="text" id="enlace-icon" placeholder="Icono (ej: facebook)">
+                <button onclick="agregarEnlace()">Añadir</button>
+            </div>
+            <div class="admin-section">
+                <button onclick="exportarDatos()" class="btn-secondary">Exportar Datos</button>
+                <button onclick="limpiarDatos()" class="btn-danger">Limpiar Todo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts modulares -->
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

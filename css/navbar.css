@@ -1,0 +1,114 @@
+/**
+ * Estilos de Navbar
+ */
+
+.navbar {
+    background: #060b14;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    white-space: nowrap;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    color: var(--text-bright);
+    border-bottom-color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger:hover span {
+    background-color: var(--primary-color);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #060b14;
+        padding: 1rem;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 0.75rem;
+        border-bottom: none;
+        border-left: 2px solid transparent;
+        padding-left: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        border-bottom: none;
+        border-left-color: var(--primary-color);
+        background: rgba(59, 130, 246, 0.08);
+        color: var(--text-bright);
+    }
+}

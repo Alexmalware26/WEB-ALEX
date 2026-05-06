@@ -1,0 +1,193 @@
+/**
+ * Estilos del Panel Administrativo
+ */
+
+.admin-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggle-admin {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-admin:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.5);
+}
+
+.toggle-admin:active {
+    transform: scale(0.95);
+}
+
+.admin-content {
+    display: none;
+    position: absolute;
+    bottom: 74px;
+    right: 0;
+    background: #0d1526;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    width: 350px;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+}
+
+.admin-content.active {
+    display: block;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-content h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-bright);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.admin-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-section:last-child {
+    border-bottom: none;
+}
+
+.admin-section h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-bright);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.admin-section input,
+.admin-section textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 0.5rem;
+    background: #111827;
+    color: var(--text-bright);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.admin-section input::placeholder,
+.admin-section textarea::placeholder {
+    color: var(--text-color);
+}
+
+.admin-section input:focus,
+.admin-section textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.admin-section button {
+    width: 100%;
+    padding: 9px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 700;
+    transition: var(--transition-base);
+    font-family: inherit;
+    letter-spacing: 0.3px;
+}
+
+.admin-section button:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.admin-section button:active {
+    transform: scale(0.98);
+}
+
+.admin-section button.btn-secondary,
+.admin-section button.btn-danger {
+    margin-top: 0.5rem;
+}
+
+/* Responsive Admin Panel */
+@media (max-width: 600px) {
+    .admin-panel {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .toggle-admin {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .admin-content {
+        width: 280px;
+        max-height: 500px;
+        bottom: 65px;
+        padding: 1.5rem;
+    }
+
+    .admin-section {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Scrollbar del panel admin */
+.admin-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.admin-content::-webkit-scrollbar-track {
+    background: var(--dark-color);
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}

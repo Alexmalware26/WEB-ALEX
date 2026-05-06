@@ -1,0 +1,55 @@
+{
+    "servicios": [
+        {
+            "nombre": "Diseño Web",
+            "descripcion": "Creación de sitios web modernos y responsivos",
+            "icono": "palette"
+        },
+        {
+            "nombre": "Desarrollo Web",
+            "descripcion": "Desarrollo full-stack con tecnologías actuales",
+            "icono": "code"
+        },
+        {
+            "nombre": "Consultoría IT",
+            "descripcion": "Asesoramiento profesional en soluciones digitales",
+            "icono": "lightbulb"
+        }
+    ],
+    "widgets": [
+        {
+            "titulo": "Estadísticas",
+            "contenido": "✓ +50 Proyectos Completados"
+        },
+        {
+            "titulo": "Experiencia",
+            "contenido": "✓ 5+ Años en la Industria"
+        },
+        {
+            "titulo": "Clientes",
+            "contenido": "✓ 30+ Clientes Satisfechos"
+        }
+    ],
+    "enlaces": [
+        {
+            "titulo": "Facebook",
+            "url": "https://facebook.com",
+            "icono": "facebook"
+        },
+        {
+            "titulo": "LinkedIn",
+            "url": "https://linkedin.com",
+            "icono": "linkedin"
+        },
+        {
+            "titulo": "GitHub",
+            "url": "https://github.com",
+            "icono": "github"
+        },
+        {
+            "titulo": "Twitter",
+            "url": "https://twitter.com",
+            "icono": "twitter"
+        }
+    ]
+}
