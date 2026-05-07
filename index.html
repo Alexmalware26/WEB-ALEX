@@ -108,7 +108,7 @@
 
     <!-- Panel de administración (modo desarrollo) -->
     <div class="admin-panel" id="admin-panel">
-        <button class="toggle-admin" onclick="toggleAdmin()">⚙️</button>
+        <button class="toggle-admin">⚙️</button>
         <div class="admin-content" id="admin-content">
             <h3>Panel de Control</h3>
             <div class="admin-section">
@@ -116,24 +116,24 @@
                 <input type="text" id="servicio-nombre" placeholder="Nombre del servicio">
                 <textarea id="servicio-desc" placeholder="Descripción" rows="3"></textarea>
                 <input type="text" id="servicio-icon" placeholder="Icono (ej: star)">
-                <button onclick="agregarServicio()">Añadir</button>
+                <button onclick="AdminPanel.agregarServicio()">Añadir</button>
             </div>
             <div class="admin-section">
                 <h4>Agregar Widget</h4>
                 <input type="text" id="widget-titulo" placeholder="Título del widget">
                 <input type="text" id="widget-contenido" placeholder="Contenido">
-                <button onclick="agregarWidget()">Añadir</button>
+                <button onclick="AdminPanel.agregarWidget()">Añadir</button>
             </div>
             <div class="admin-section">
                 <h4>Agregar Enlace</h4>
                 <input type="text" id="enlace-titulo" placeholder="Título del enlace">
                 <input type="url" id="enlace-url" placeholder="URL">
                 <input type="text" id="enlace-icon" placeholder="Icono (ej: facebook)">
-                <button onclick="agregarEnlace()">Añadir</button>
+                <button onclick="AdminPanel.agregarEnlace()">Añadir</button>
             </div>
             <div class="admin-section">
-                <button onclick="exportarDatos()" class="btn-secondary">Exportar Datos</button>
-                <button onclick="limpiarDatos()" class="btn-danger">Limpiar Todo</button>
+                <button onclick="AdminPanel.exportarDatos()" class="btn-secondary">Exportar Datos</button>
+                <button onclick="AdminPanel.limpiarTodo()" class="btn-danger">Limpiar Todo</button>
             </div>
         </div>
     </div>
