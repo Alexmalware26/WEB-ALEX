@@ -4,9 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Creación de páginas web profesionales, modernas y rápidas para impulsar tu negocio o marca personal.">
-    <meta name="theme-color" content="#3b82f6">
-    <title>HadesCreative | Creación de Páginas Web</title>
+
+    <!-- SEO Básico -->
+    <title>HadesCreative | Creación de Páginas Web Profesionales</title>
+    <meta name="description" content="Diseño y desarrollo páginas web profesionales, landing pages, tiendas online y CRMs personalizados. Contacta y hacemos realidad tu proyecto.">
+    <meta name="keywords" content="creación páginas web, diseño web profesional, desarrollo web, landing page, tienda online, CRM personalizado">
+    <meta name="author" content="HadesCreative">
+    <meta name="theme-color" content="#e11d48">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HadesCreative | Creación de Páginas Web Profesionales">
+    <meta property="og:description" content="Todo lo que puedas imaginar, se puede crear. Diseño web profesional, landing pages, tiendas online y automatizaciones.">
+    <meta property="og:image" content="assets/images/nyx.png">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HadesCreative | Creación de Páginas Web">
+    <meta name="twitter:description" content="Todo lo que puedas imaginar, se puede crear. Contacta y hacemos realidad tu proyecto.">
+    <meta name="twitter:image" content="assets/images/nyx.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon.svg">
+
+    <!-- Preconnect para rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fuente Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/global.css">
@@ -14,17 +47,21 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/admin.css">
-
-    <!-- Fuente Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- Splash screen -->
+    <div id="splash" class="splash">
+        <div class="splash-logo">Hades<span>Creative</span></div>
+        <div class="splash-bar"></div>
+    </div>
+
+    <!-- Botón volver arriba -->
+    <button id="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <canvas id="hero-canvas"></canvas>
 
     <!-- Hades decorativo -->
@@ -171,7 +208,7 @@
                 <!-- PROYECTO: NYX -->
                 <div class="proyecto-card">
                     <div class="proyecto-imagen">
-                        <img src="assets/images/nyx.png" alt="NYX - EMS Tecnología" onerror="this.parentElement.classList.add('sin-imagen')">
+                        <img src="assets/images/nyx.png" alt="NYX - EMS Tecnología" loading="lazy" onerror="this.parentElement.classList.add('sin-imagen')">
                         <div class="proyecto-overlay">
                             <a href="https://esmelek-akmfsmkdw-alexmalware26s-projects.vercel.app/" target="_blank" rel="noopener" class="btn-ver-sitio">
                                 <i class="fas fa-external-link-alt"></i> Ver sitio
@@ -321,6 +358,7 @@
 
     <!-- Scripts modulares -->
     <script src="js/particles.js"></script>
+    <script src="js/ux.js"></script>
     <script src="js/hades.js"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>

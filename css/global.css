@@ -223,6 +223,122 @@ select:focus {
     transform: rotate(6deg);
 }
 
+/* ── Splash Screen ── */
+.splash {
+    position: fixed;
+    inset: 0;
+    background: #080808;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.splash-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-logo {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+    animation: splashPulse 0.9s ease-in-out infinite alternate;
+}
+
+.splash-logo span {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.splash-bar {
+    width: 160px;
+    height: 3px;
+    background: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.splash-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+    animation: splashLoad 1.4s ease-in-out forwards;
+}
+
+@keyframes splashPulse {
+    from { opacity: 0.6; }
+    to   { opacity: 1; }
+}
+
+@keyframes splashLoad {
+    from { width: 0%; }
+    to   { width: 100%; }
+}
+
+/* ── Scroll animations ── */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Nav link activo ── */
+.nav-link.active {
+    color: var(--text-bright);
+    border-bottom-color: var(--primary-color);
+}
+
+/* ── Botón volver arriba ── */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 44px;
+    height: 44px;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-base);
+}
+
+#back-to-top.btt-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {
     width: 8px;
