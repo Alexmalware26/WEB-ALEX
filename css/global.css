@@ -77,6 +77,11 @@ body {
     pointer-events: none;
 }
 
+section, footer, .navbar, .whatsapp-btn, .acordeon-section {
+    position: relative;
+    z-index: 3;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -193,6 +198,29 @@ select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Hades decorativo fondo */
+.hades-deco {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    width: 520px;
+    opacity: 0.18;
+    filter: drop-shadow(0 0 40px rgba(225,29,72,0.8)) drop-shadow(0 0 80px rgba(180,10,30,0.5));
+}
+
+.hades-top {
+    top: -40px;
+    right: -60px;
+    transform: scaleX(-1) rotate(-8deg);
+}
+
+.hades-bottom {
+    bottom: -60px;
+    left: -60px;
+    transform: rotate(6deg);
 }
 
 /* Scrollbar personalizado */

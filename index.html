@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creación de páginas web profesionales, modernas y rápidas para impulsar tu negocio o marca personal.">
     <meta name="theme-color" content="#3b82f6">
-    <title>HeadesCreative | Creación de Páginas Web</title>
+    <title>HadesCreative | Creación de Páginas Web</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/global.css">
@@ -27,10 +27,14 @@
 <body>
     <canvas id="hero-canvas"></canvas>
 
+    <!-- Hades decorativo -->
+    <img src="assets/images/hades.png" class="hades-deco hades-top" alt="">
+    <img src="assets/images/hades.png" class="hades-deco hades-bottom" alt="">
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-logo">Heades<span>Creative</span></div>
+            <div class="nav-logo">Hades<span>Creative</span></div>
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
@@ -134,25 +138,21 @@
             <p class="section-subtitle">Un proceso claro y transparente para obtener los mejores resultados</p>
             <div class="proceso-grid">
                 <div class="proceso-step">
-                    <div class="step-number">01</div>
                     <i class="fas fa-comments"></i>
                     <h3>Consulta inicial</h3>
                     <p>Hablamos sobre tu proyecto, objetivos y necesidades para entender exactamente qué buscas.</p>
                 </div>
                 <div class="proceso-step">
-                    <div class="step-number">02</div>
                     <i class="fas fa-pencil-ruler"></i>
                     <h3>Diseño y propuesta</h3>
                     <p>Creo el diseño visual y la estructura de tu web, con una propuesta completa y presupuesto.</p>
                 </div>
                 <div class="proceso-step">
-                    <div class="step-number">03</div>
                     <i class="fas fa-code"></i>
                     <h3>Desarrollo</h3>
                     <p>Programo tu web con tecnologías modernas asegurando velocidad, seguridad y diseño responsive.</p>
                 </div>
                 <div class="proceso-step">
-                    <div class="step-number">04</div>
                     <i class="fas fa-rocket"></i>
                     <h3>Lanzamiento</h3>
                     <p>Publicamos tu web, configuramos el dominio y te entrego todo listo para funcionar al 100%.</p>
@@ -220,15 +220,57 @@
     <!-- Contacto -->
     <section id="contacto" class="contacto">
         <div class="container">
-            <h2>Contacto</h2>
-            <p class="section-subtitle">Cuéntame sobre tu proyecto y te respondo en menos de 24 horas</p>
-            <form id="contacto-form" class="contacto-form">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                <input type="text" name="asunto" placeholder="¿De qué trata tu proyecto?">
-                <textarea name="mensaje" placeholder="Cuéntame más sobre tu proyecto..." rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Enviar mensaje</button>
-            </form>
+            <div class="contacto-wrapper">
+
+                <div class="contacto-info">
+                    <span class="contacto-tag">Hablemos</span>
+                    <h2>¿Tienes un proyecto<br><span>en mente?</span></h2>
+                    <p>Cuéntame tu idea y te respondo en menos de 24 horas. Sin compromisos, sin letra pequeña.</p>
+
+                    <div class="contacto-items">
+                        <div class="contacto-item">
+                            <div class="contacto-item-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+34 655 080 442</span>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <div class="contacto-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>sativezip@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <div class="contacto-item-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Respuesta</strong>
+                                <span>En menos de 24h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacto-form-wrapper">
+                    <form id="contacto-form" class="contacto-form">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="asunto" placeholder="¿De qué trata tu proyecto?">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" placeholder="Cuéntame más sobre tu proyecto..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Enviar mensaje <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -237,21 +279,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">HeadesCreative</div>
-                    <p>Creación de páginas web profesionales para impulsar tu presencia digital.</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Sígueme en</h4>
-                    <div class="enlaces-grid" id="enlaces-grid">
-                        <!-- Los enlaces sociales se cargarán aquí -->
-                    </div>
+                    <div class="footer-logo">HadesCreative</div>
+                    <p>Todo lo que puedas imaginar, se puede crear, contáctanos y hacemos realidad tus ideas.</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 HeadesCreative. Todos los derechos reservados.</p>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/alexroadiaz/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:sativezip@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p>&copy; 2026 HadesCreative. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- WhatsApp flotante -->
     <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
@@ -273,6 +321,7 @@
 
     <!-- Scripts modulares -->
     <script src="js/particles.js"></script>
+    <script src="js/hades.js"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/data.js"></script>

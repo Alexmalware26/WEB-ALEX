@@ -234,38 +234,149 @@ section h2::after {
     background: transparent;
 }
 
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Info lado izquierdo */
+.contacto-tag {
+    display: inline-block;
+    background: rgba(225, 29, 72, 0.12);
+    color: var(--primary-color);
+    border: 1px solid rgba(225, 29, 72, 0.3);
+    padding: 5px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-info h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-bright);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.contacto-info h2::after {
+    display: none;
+}
+
+.contacto-info h2 span {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacto-info > p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contacto-item-icon {
+    width: 46px;
+    height: 46px;
+    background: rgba(225, 29, 72, 0.1);
+    border: 1px solid rgba(225, 29, 72, 0.25);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contacto-item strong {
+    display: block;
+    color: var(--text-bright);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.contacto-item span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Formulario lado derecho */
+.contacto-form-wrapper {
+    background: rgba(20, 5, 8, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
 .contacto-form {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contacto-form input,
-.contacto-form textarea {
-    padding: 15px;
-    background: var(--card-color);
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.04);
     color: var(--text-bright);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    font-size: 1rem;
+    font-size: 0.95rem;
+    transition: var(--transition-base);
 }
 
-.contacto-form input::placeholder,
-.contacto-form textarea::placeholder {
-    color: var(--text-color);
-}
-
-.contacto-form input:focus,
-.contacto-form textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    background: rgba(225, 29, 72, 0.05);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
 }
 
-.contacto-form button {
-    margin-top: 1rem;
+.btn-full {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 14px 32px;
+}
+
+/* Responsive contacto */
+@media (max-width: 768px) {
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contacto-info h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Acordeón */
@@ -693,6 +804,35 @@ section h2::after {
     font-size: 0.9rem;
 }
 
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.footer-icons a:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
 /* Botón de eliminar */
 .delete-btn {
     position: absolute;
@@ -717,6 +857,51 @@ section h2::after {
     background: #dc2626;
     transform: scale(1.15);
     box-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+}
+
+/* Sidebar iconos sociales */
+.social-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.social-sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: rgba(18, 3, 6, 0.85);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid transparent;
+    backdrop-filter: blur(8px);
+    transition: var(--transition-base);
+}
+
+.social-sidebar a:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.social-sidebar a:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .social-sidebar {
+        display: none;
+    }
 }
 
 /* WhatsApp flotante */

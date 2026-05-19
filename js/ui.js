@@ -18,13 +18,49 @@ const UIManager = (() => {
      */
     const inicializarContacto = () => {
         const formulario = document.querySelector(CONFIG.SELECTORS.CONTACTO_FORM);
-        if (formulario) {
-            formulario.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert(CONFIG.MENSAJES.EXITO.MENSAJE_ENVIADO);
-                formulario.reset();
-            });
-        }
+        if (!formulario) return;
+
+        // FORMSPREE: reemplaza esta URL con la tuya de formspree.io/f/XXXXXXXX
+        const FORMSPREE_URL = 'https://formspree.io/f/XXXXXXXX';
+
+        formulario.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btn = formulario.querySelector('button[type="submit"]');
+            const textoOriginal = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = 'Enviando... <i class="fas fa-spinner fa-spin"></i>';
+
+            try {
+                const datos = new FormData(formulario);
+                const respuesta = await fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    body: datos,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (respuesta.ok) {
+                    btn.innerHTML = '¡Mensaje enviado! <i class="fas fa-check"></i>';
+                    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                    formulario.reset();
+                    setTimeout(() => {
+                        btn.innerHTML = textoOriginal;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 4000);
+                } else {
+                    throw new Error('Error al enviar');
+                }
+            } catch {
+                btn.innerHTML = 'Error al enviar. Inténtalo de nuevo.';
+                btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                setTimeout(() => {
+                    btn.innerHTML = textoOriginal;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
+        });
     };
 
     /**
