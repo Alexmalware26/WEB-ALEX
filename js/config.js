@@ -5,7 +5,7 @@
 
 const CONFIG = {
     // Claves de almacenamiento
-    STORAGE_KEY: 'datosPortafolio',
+    STORAGE_KEY: 'hcDatos_v3',
     STORAGE_VERSION: '1.0',
 
     // Íconos disponibles
@@ -26,17 +26,17 @@ const CONFIG = {
         servicios: [
             {
                 nombre: "Diseño Web",
-                descripcion: "Creación de sitios web modernos y responsivos",
+                descripcion: "Creación de sitios web, Landings Pages y Portafolios, tiendas drop-shipping, etc.",
                 icono: "palette"
             },
             {
                 nombre: "Desarrollo Web",
-                descripcion: "Desarrollo full-stack con tecnologías actuales",
+                descripcion: "Desarrollo full-stack con tecnologías actuales para proyectos personalizados",
                 icono: "code"
             },
             {
                 nombre: "Consultoría IT",
-                descripcion: "Asesoramiento profesional en soluciones digitales",
+                descripcion: "Asesoramiento especificio para optimizar tu infraestructura tecnológica y procesos digitales",
                 icono: "lightbulb"
             }
         ],
@@ -56,11 +56,6 @@ const CONFIG = {
         ],
         enlaces: [
             {
-                titulo: "Facebook",
-                url: "https://facebook.com",
-                icono: "facebook"
-            },
-            {
                 titulo: "LinkedIn",
                 url: "https://www.linkedin.com/in/alexroadiaz/",
                 icono: "linkedin"
@@ -69,11 +64,6 @@ const CONFIG = {
                 titulo: "GitHub",
                 url: "https://github.com",
                 icono: "github"
-            },
-            {
-                titulo: "Twitter",
-                url: "https://twitter.com",
-                icono: "twitter"
             }
         ]
     },

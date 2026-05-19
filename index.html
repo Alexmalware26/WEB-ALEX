@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mi portafolio profesional con servicios, widgets y enlaces">
+    <meta name="description" content="Creación de páginas web profesionales, modernas y rápidas para impulsar tu negocio o marca personal.">
     <meta name="theme-color" content="#3b82f6">
-    <title>Mi Portafolio Profesional</title>
+    <title>HeadesCreative | Creación de Páginas Web</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/global.css">
@@ -25,15 +25,17 @@
 </head>
 
 <body>
+    <canvas id="hero-canvas"></canvas>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-logo">ROA Site</div>
+            <div class="nav-logo">Heades<span>Creative</span></div>
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#widgets" class="nav-link">Widgets</a></li>
-                <li><a href="#enlaces" class="nav-link">Enlaces</a></li>
+                <li><a href="#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -47,12 +49,21 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>¡Bienvenido!</h1>
-            <p>Ofrezco servicios profesionales de alta calidad</p>
-            <button class="btn-primary"
-                onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})">
-                Descubre mis servicios
-            </button>
+            <h1>Tu presencia en internet, <span>a otro nivel</span></h1>
+            <p>Diseño y desarrollo páginas web profesionales, rápidas y modernas para impulsar tu negocio o marca personal.</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn-primary">Ver servicios</a>
+                <a href="#portafolio" class="btn-outline">Ver portafolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats">
+        <div class="container">
+            <div class="widgets-container" id="widgets-container">
+                <!-- Las estadísticas se cargarán aquí -->
+            </div>
         </div>
     </section>
 
@@ -60,29 +71,149 @@
     <section id="servicios" class="servicios">
         <div class="container">
             <h2>Mis Servicios</h2>
+            <p class="section-subtitle">Soluciones web completas adaptadas a tus necesidades</p>
             <div class="servicios-grid" id="servicios-grid">
                 <!-- Los servicios se cargarán aquí -->
             </div>
         </div>
     </section>
 
-    <!-- Widgets -->
-    <section id="widgets" class="widgets">
+    <!-- Acordeón servicios -->
+    <section class="acordeon-section">
         <div class="container">
-            <h2>Widgets</h2>
-            <div class="widgets-container" id="widgets-container">
-                <!-- Los widgets se cargarán aquí -->
+            <div class="acordeon">
+
+                <div class="acordeon-item">
+                    <button class="acordeon-header">
+                        <span><i class="fas fa-globe"></i> Crear una Web</span>
+                        <i class="fas fa-chevron-down acordeon-icon"></i>
+                    </button>
+                    <div class="acordeon-body">
+                        <p>Diseño y desarrollo tu web desde cero — landing pages, portafolios, tiendas online o cualquier proyecto personalizado. Entrega completa con dominio, hosting y todo listo para funcionar.</p>
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <button class="acordeon-header">
+                        <span><i class="fas fa-pencil-alt"></i> Modificar una Web existente</span>
+                        <i class="fas fa-chevron-down acordeon-icon"></i>
+                    </button>
+                    <div class="acordeon-body">
+                        <p>¿Tienes una web pero necesita cambios? Actualizo diseño, añado secciones, corrijo errores o mejoro el rendimiento y posicionamiento de tu sitio actual.</p>
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <button class="acordeon-header">
+                        <span><i class="fas fa-robot"></i> Automatizar servicios</span>
+                        <i class="fas fa-chevron-down acordeon-icon"></i>
+                    </button>
+                    <div class="acordeon-body">
+                        <p>Automatizo tareas repetitivas de tu negocio — formularios, notificaciones, integraciones con herramientas externas, bots y flujos de trabajo para que trabajes más eficiente.</p>
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <button class="acordeon-header">
+                        <span><i class="fas fa-briefcase"></i> Creación de CRM personalizado para tu empresa</span>
+                        <i class="fas fa-chevron-down acordeon-icon"></i>
+                    </button>
+                    <div class="acordeon-body">
+                        <p>Desarrollo un CRM a medida adaptado a los procesos de tu empresa — gestión de clientes, seguimiento de ventas, tareas y reportes, todo en una plataforma propia y sin costes de suscripción externos.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Enlaces -->
-    <section id="enlaces" class="enlaces">
+    <!-- Proceso de trabajo -->
+    <section id="proceso" class="proceso">
         <div class="container">
-            <h2>Mis Enlaces</h2>
-            <div class="enlaces-grid" id="enlaces-grid">
-                <!-- Los enlaces se cargarán aquí -->
+            <h2>Cómo Trabajo</h2>
+            <p class="section-subtitle">Un proceso claro y transparente para obtener los mejores resultados</p>
+            <div class="proceso-grid">
+                <div class="proceso-step">
+                    <div class="step-number">01</div>
+                    <i class="fas fa-comments"></i>
+                    <h3>Consulta inicial</h3>
+                    <p>Hablamos sobre tu proyecto, objetivos y necesidades para entender exactamente qué buscas.</p>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">02</div>
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Diseño y propuesta</h3>
+                    <p>Creo el diseño visual y la estructura de tu web, con una propuesta completa y presupuesto.</p>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">03</div>
+                    <i class="fas fa-code"></i>
+                    <h3>Desarrollo</h3>
+                    <p>Programo tu web con tecnologías modernas asegurando velocidad, seguridad y diseño responsive.</p>
+                </div>
+                <div class="proceso-step">
+                    <div class="step-number">04</div>
+                    <i class="fas fa-rocket"></i>
+                    <h3>Lanzamiento</h3>
+                    <p>Publicamos tu web, configuramos el dominio y te entrego todo listo para funcionar al 100%.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portafolio" class="portafolio">
+        <div class="container">
+            <h2>Portafolio</h2>
+            <p class="section-subtitle">Algunos de los proyectos en los que he trabajado</p>
+            <div class="portafolio-grid">
+
+                <!-- PROYECTO: NYX -->
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="assets/images/nyx.png" alt="NYX - EMS Tecnología" onerror="this.parentElement.classList.add('sin-imagen')">
+                        <div class="proyecto-overlay">
+                            <a href="https://esmelek-akmfsmkdw-alexmalware26s-projects.vercel.app/" target="_blank" rel="noopener" class="btn-ver-sitio">
+                                <i class="fas fa-external-link-alt"></i> Ver sitio
+                            </a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>NYX</h3>
+                        <p>Empresa EMS — tecnología de alta infraestructura.</p>
+                        <div class="proyecto-tags">
+                            <span>EMS</span>
+                            <span>SMD</span>
+                            <span>MONTAJES</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN PROYECTO: NYX -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <h2>Lo que dicen mis clientes</h2>
+            <p class="section-subtitle">La satisfacción de mis clientes es mi mayor logro</p>
+            <div class="testimonios-grid">
+                <div class="testimonio-placeholder">
+                    <i class="fas fa-star"></i>
+                    <p>Testimonios próximamente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>¿Listo para empezar tu proyecto?</h2>
+            <p>Hablemos hoy y hagamos realidad la web que tu negocio necesita</p>
+            <a href="#contacto" class="btn-primary">Empezar ahora</a>
         </div>
     </section>
 
@@ -90,11 +221,13 @@
     <section id="contacto" class="contacto">
         <div class="container">
             <h2>Contacto</h2>
+            <p class="section-subtitle">Cuéntame sobre tu proyecto y te respondo en menos de 24 horas</p>
             <form id="contacto-form" class="contacto-form">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu email" required>
-                <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Enviar</button>
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <input type="text" name="asunto" placeholder="¿De qué trata tu proyecto?">
+                <textarea name="mensaje" placeholder="Cuéntame más sobre tu proyecto..." rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar mensaje</button>
             </form>
         </div>
     </section>
@@ -102,43 +235,44 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Mi Portafolio Profesional. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">HeadesCreative</div>
+                    <p>Creación de páginas web profesionales para impulsar tu presencia digital.</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Sígueme en</h4>
+                    <div class="enlaces-grid" id="enlaces-grid">
+                        <!-- Los enlaces sociales se cargarán aquí -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HeadesCreative. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Panel de administración (modo desarrollo) -->
-    <div class="admin-panel" id="admin-panel">
-        <button class="toggle-admin">⚙️</button>
-        <div class="admin-content" id="admin-content">
-            <h3>Panel de Control</h3>
-            <div class="admin-section">
-                <h4>Agregar Servicio</h4>
-                <input type="text" id="servicio-nombre" placeholder="Nombre del servicio">
-                <textarea id="servicio-desc" placeholder="Descripción" rows="3"></textarea>
-                <input type="text" id="servicio-icon" placeholder="Icono (ej: star)">
-                <button onclick="AdminPanel.agregarServicio()">Añadir</button>
-            </div>
-            <div class="admin-section">
-                <h4>Agregar Widget</h4>
-                <input type="text" id="widget-titulo" placeholder="Título del widget">
-                <input type="text" id="widget-contenido" placeholder="Contenido">
-                <button onclick="AdminPanel.agregarWidget()">Añadir</button>
-            </div>
-            <div class="admin-section">
-                <h4>Agregar Enlace</h4>
-                <input type="text" id="enlace-titulo" placeholder="Título del enlace">
-                <input type="url" id="enlace-url" placeholder="URL">
-                <input type="text" id="enlace-icon" placeholder="Icono (ej: facebook)">
-                <button onclick="AdminPanel.agregarEnlace()">Añadir</button>
-            </div>
-            <div class="admin-section">
-                <button onclick="AdminPanel.exportarDatos()" class="btn-secondary">Exportar Datos</button>
-                <button onclick="AdminPanel.limpiarTodo()" class="btn-danger">Limpiar Todo</button>
-            </div>
-        </div>
-    </div>
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Hablamos?</span>
+    </a>
+
+
+    <script>
+        document.querySelectorAll('.acordeon-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const abierto = item.classList.contains('abierto');
+                document.querySelectorAll('.acordeon-item').forEach(i => i.classList.remove('abierto'));
+                if (!abierto) item.classList.add('abierto');
+            });
+        });
+    </script>
 
     <!-- Scripts modulares -->
+    <script src="js/particles.js"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/data.js"></script>

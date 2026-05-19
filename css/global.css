@@ -10,16 +10,16 @@
 }
 
 :root {
-    --primary-color: #3b82f6;
-    --secondary-color: #ef4444;
-    --dark-color: #020817;
-    --surface-color: #0f172a;
-    --card-color: #111827;
-    --light-color: #1e293b;
-    --text-color: #94a3b8;
-    --text-bright: #f1f5f9;
-    --border-color: #1e2d40;
-    --error-color: #ef4444;
+    --primary-color: #e11d48;
+    --secondary-color: #ff2d55;
+    --dark-color: #080808;
+    --surface-color: #111111;
+    --card-color: #181818;
+    --light-color: #222222;
+    --text-color: #888888;
+    --text-bright: #f0f0f0;
+    --border-color: #2a2a2a;
+    --error-color: #ff3b3b;
     --success-color: #22c55e;
     --warning-color: #f59e0b;
 
@@ -46,9 +46,7 @@ html {
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
-    background: linear-gradient(135deg, #020817 0%, #0c1428 25%, #0f0a2e 50%, #0c1428 75%, #020817 100%);
-    background-size: 400% 400%;
-    animation: animatedGradient 15s ease infinite;
+    background: #0a0101;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -68,6 +66,15 @@ body {
         background-position: 0% 50%;
         filter: brightness(0.85);
     }
+}
+
+#hero-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
@@ -98,7 +105,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.45);
     filter: brightness(1.1);
 }
 
@@ -112,7 +119,7 @@ body {
 .btn-secondary:hover {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.35);
 }
 
 .btn-danger {
