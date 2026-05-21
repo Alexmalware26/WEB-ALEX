@@ -21,7 +21,7 @@ const UIManager = (() => {
         if (!formulario) return;
 
         // FORMSPREE: reemplaza esta URL con la tuya de formspree.io/f/XXXXXXXX
-        const FORMSPREE_URL = 'https://formspree.io/f/XXXXXXXX';
+        const FORMSPREE_URL = 'https://formspree.io/f/mdajeqvq';
 
         formulario.addEventListener('submit', async (e) => {
             e.preventDefault();
