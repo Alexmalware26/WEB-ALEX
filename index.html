@@ -102,6 +102,14 @@
                 <a href="#contacto" class="btn-primary">Empezar proyecto</a>
                 <a href="#portafolio" class="btn-outline">Ver trabajos</a>
             </div>
+            <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="hero-whatsapp">
+                <i class="fab fa-whatsapp"></i> ¿Prefieres hablar por WhatsApp?
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#servicios" aria-label="Ver más contenido">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
@@ -379,12 +387,78 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            <p class="section-subtitle">Todo lo que necesitas saber antes de empezar</p>
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        <span>¿Cuánto tiempo tarda en estar lista mi web?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Depende del proyecto. Una landing page puede estar lista en 5-7 días. Una web completa entre 2-3 semanas. Los CRMs personalizados requieren más tiempo según la complejidad. Al inicio del proyecto te doy un plazo concreto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        <span>¿El precio incluye dominio y hosting?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Sí, en los planes de Web Completa y superiores el dominio y hosting del primer año están incluidos. El alojamiento se hace en Vercel, que ofrece alta velocidad y fiabilidad sin coste adicional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        <span>¿Puedo modificar la web yo mismo una vez entregada?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Sí. Te entrego acceso completo al código y al repositorio. Si prefieres que yo me encargue del mantenimiento y las actualizaciones, también ofrezco ese servicio por separado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        <span>¿Qué necesito para empezar a trabajar contigo?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Solo contarme tu idea. Con una llamada o conversación por WhatsApp es suficiente para entender lo que necesitas y prepararte una propuesta. No hace falta que tengas nada preparado de antemano.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        <span>¿Qué pasa si no me gusta el resultado?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Todos los proyectos incluyen rondas de revisión para ajustar diseño, textos y estructura hasta que estés satisfecho. Mi objetivo es que el resultado sea exactamente lo que imaginabas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Banner -->
     <section class="cta-banner">
         <div class="container">
             <h2>¿Listo para empezar tu proyecto?</h2>
             <p>Hablemos hoy y hagamos realidad la web que tu negocio necesita</p>
-            <a href="#contacto" class="btn-primary">Empezar ahora</a>
+            <div class="cta-actions">
+                <a href="#contacto" class="btn-primary">Empezar ahora</a>
+                <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="btn-whatsapp-cta">
+                    <i class="fab fa-whatsapp"></i> WhatsApp directo
+                </a>
+            </div>
         </div>
     </section>
 
@@ -508,6 +582,17 @@
         <span>¿Hablamos?</span>
     </a>
 
+
+    <script>
+        document.querySelectorAll('.faq-pregunta').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const abierto = item.classList.contains('abierto');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('abierto'));
+                if (!abierto) item.classList.add('abierto');
+            });
+        });
+    </script>
 
     <script>
         document.querySelectorAll('.acordeon-header').forEach(btn => {
