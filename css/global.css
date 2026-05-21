@@ -43,6 +43,12 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (min-width: 1024px) {
+    html {
+        zoom: 0.75;
+    }
+}
+
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
