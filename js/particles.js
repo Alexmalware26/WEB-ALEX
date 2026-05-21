@@ -5,8 +5,8 @@
     const ctx = canvas.getContext('2d');
     const mouse = { x: null, y: null };
     const particles = [];
-    const COUNT = 90;
-    const MAX_DIST = 140;
+    const COUNT = 65;
+    const MAX_DIST = 130;
 
     const COLORS = [
         [225, 29, 72],    // rojo carmesí

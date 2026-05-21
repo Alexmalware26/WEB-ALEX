@@ -5,7 +5,7 @@
 
 const CONFIG = {
     // Claves de almacenamiento
-    STORAGE_KEY: 'hcDatos_v3',
+    STORAGE_KEY: 'hcDatos_v4',
     STORAGE_VERSION: '1.0',
 
     // Íconos disponibles
@@ -42,16 +42,20 @@ const CONFIG = {
         ],
         widgets: [
             {
-                titulo: "Estadísticas",
-                contenido: "✓ +50 Proyectos Completados"
+                titulo: "+50",
+                contenido: "Proyectos completados"
             },
             {
-                titulo: "Experiencia",
-                contenido: "✓ 5+ Años en la Industria"
+                titulo: "5+",
+                contenido: "Años de experiencia"
             },
             {
-                titulo: "Clientes",
-                contenido: "✓ 30+ Clientes Satisfechos"
+                titulo: "+30",
+                contenido: "Clientes satisfechos"
+            },
+            {
+                titulo: "24h",
+                contenido: "Tiempo de respuesta"
             }
         ],
         enlaces: [

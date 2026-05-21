@@ -23,10 +23,10 @@ section h2::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    border-radius: 2px;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
 }
 
 .section-subtitle {
@@ -112,61 +112,54 @@ section h2::after {
     font-size: 0.95rem;
 }
 
-/* Widgets / Stats cards */
+/* Stats strip */
 .widgets {
     background: transparent;
+    padding: 60px 20px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .widgets-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0;
 }
 
 .widget {
-    background: linear-gradient(135deg, #1a0308 0%, #7f1d1d 100%);
-    color: white;
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    background: transparent;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
     transition: var(--transition-base);
     position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.widget:nth-child(2) {
-    background: linear-gradient(135deg, #0a0a0a 0%, #3f0a0a 100%);
-}
-
-.widget:nth-child(3) {
-    background: linear-gradient(135deg, #1a0308 0%, #be123c 100%);
-}
-
-.widget:nth-child(4) {
-    background: linear-gradient(135deg, #0a0a0a 0%, #881337 100%);
-}
-
-.widget:nth-child(5) {
-    background: linear-gradient(135deg, #1f0105 0%, #9f1239 100%);
+.widget:last-child {
+    border-right: none;
 }
 
 .widget:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+    background: rgba(225, 29, 72, 0.04);
 }
 
 .widget h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, #e11d48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
     margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: white;
 }
 
 .widget p {
-    opacity: 0.8;
-    line-height: 1.6;
-    font-size: 1rem;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Enlaces */

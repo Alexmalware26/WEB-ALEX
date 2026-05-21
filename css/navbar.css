@@ -10,8 +10,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(225, 29, 72, 0.12);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.2);
 }
 
 .navbar .container {
