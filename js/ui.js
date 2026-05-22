@@ -76,12 +76,14 @@ const UIManager = (() => {
             hamburger.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
             });
 
             // Cerrar menú al hacer clic en un enlace
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
                 });
             });
 
@@ -89,6 +91,7 @@ const UIManager = (() => {
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('.navbar')) {
                     navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
                 }
             });
         }

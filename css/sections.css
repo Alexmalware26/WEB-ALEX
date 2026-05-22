@@ -1633,15 +1633,14 @@ section h2::after {
 /* Responsive Secciones */
 @media (max-width: 768px) {
     section {
-        padding: 60px 20px;
+        padding: 60px 16px;
     }
 
     section h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .servicios-grid,
-    .widgets-container,
     .proceso-grid,
     .portafolio-grid,
     .testimonios-grid {
@@ -1660,18 +1659,83 @@ section h2::after {
     .cta-banner h2 {
         font-size: 1.7rem;
     }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-actions .btn-primary,
+    .btn-whatsapp-cta {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .sobre-mi-stats {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .precio-card {
+        padding: 1.5rem;
+    }
+
+    .faq-pregunta {
+        font-size: 0.95rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .contacto-wrapper {
+        gap: 2.5rem;
+    }
+
+    .proceso-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     section {
-        padding: 40px 20px;
+        padding: 48px 16px;
     }
 
     section h2 {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
     }
 
-    .stats {
-        padding: 35px 20px;
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .servicio-card,
+    .proceso-step {
+        padding: 1.5rem;
+    }
+
+    .contacto-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .precios-grid {
+        gap: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+
+    .footer-icons a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .whatsapp-btn span {
+        display: none;
+    }
+
+    .whatsapp-btn {
+        padding: 14px;
+        border-radius: 50%;
     }
 }

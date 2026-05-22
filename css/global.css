@@ -229,6 +229,13 @@ select:focus {
     transform: rotate(6deg);
 }
 
+@media (max-width: 768px) {
+    .hades-deco {
+        width: 240px;
+        opacity: 0.06;
+    }
+}
+
 /* ── Splash Screen ── */
 .splash {
     position: fixed;
