@@ -82,10 +82,15 @@
                 <li><a href="#precios" class="nav-link">Precios</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -570,6 +575,26 @@
             document.getElementById('modal-close').addEventListener('click', cerrarModal);
             document.querySelector('.ejemplos-modal-overlay').addEventListener('click', cerrarModal);
             document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const toggle = document.getElementById('theme-toggle');
+            const icon = toggle.querySelector('i');
+            const html = document.documentElement;
+
+            if (localStorage.getItem('theme') === 'light') {
+                html.classList.add('light');
+                icon.className = 'fas fa-moon';
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('light');
+                const isLight = html.classList.contains('light');
+                icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            });
         })();
     </script>
 

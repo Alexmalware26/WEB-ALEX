@@ -352,6 +352,152 @@ select:focus {
     transform: translateY(-3px);
 }
 
+/* ── Theme toggle button ── */
+#theme-toggle {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    transition: var(--transition-base);
+    flex-shrink: 0;
+}
+
+#theme-toggle:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ── Light Mode ── */
+html.light {
+    --dark-color: #f8f3f3;
+    --surface-color: #f0eaea;
+    --card-color: #ffffff;
+    --light-color: #e8e0e0;
+    --text-color: #5a5252;
+    --text-bright: #1a1010;
+    --border-color: #ddd0d0;
+}
+
+html.light body {
+    background: #f5efef;
+}
+
+html.light .navbar {
+    background: rgba(248, 243, 243, 0.92);
+    border-bottom-color: rgba(225, 29, 72, 0.15);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(225, 29, 72, 0.1);
+}
+
+html.light .nav-logo {
+    color: #1a1010;
+}
+
+html.light .nav-link {
+    color: #5a5252;
+}
+
+html.light .nav-link:hover {
+    color: #1a1010;
+}
+
+html.light .hero-content h1 {
+    color: #1a1010;
+    text-shadow: none;
+}
+
+html.light .hero::before {
+    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.08) 0%, transparent 65%);
+}
+
+html.light .hero::after {
+    background: radial-gradient(ellipse, rgba(255, 45, 85, 0.06) 0%, transparent 65%);
+}
+
+html.light .acordeon-header,
+html.light .faq-pregunta {
+    background: #ffffff;
+}
+
+html.light .acordeon-header:hover,
+html.light .faq-pregunta:hover {
+    background: #f5efef;
+}
+
+html.light .acordeon-item.abierto .acordeon-header,
+html.light .faq-item.abierto .faq-pregunta {
+    background: rgba(225, 29, 72, 0.06);
+}
+
+html.light .acordeon-body,
+html.light .faq-respuesta {
+    background: #faf6f6;
+}
+
+html.light .contacto-form-wrapper {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+html.light .form-group input,
+html.light .form-group textarea {
+    background: #f5efef;
+    border-color: #ddd0d0;
+    color: #1a1010;
+}
+
+html.light .ejemplos-modal-box {
+    background: #ffffff;
+}
+
+html.light .ejemplos-modal-header {
+    background: #f5efef;
+}
+
+html.light .splash {
+    background: #f5efef;
+}
+
+html.light .nav-menu {
+    background: rgba(248, 243, 243, 0.98);
+}
+
+html.light #back-to-top {
+    background: #ffffff;
+    border-color: #ddd0d0;
+    color: #5a5252;
+}
+
+html.light .cta-banner {
+    border-color: rgba(225, 29, 72, 0.15);
+}
+
+html.light .footer {
+    border-top-color: #ddd0d0;
+}
+
+html.light .footer-bottom {
+    border-top-color: #ddd0d0;
+}
+
+html.light .footer-icons a {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: #ddd0d0;
+    color: #5a5252;
+}
+
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {
     width: 8px;
