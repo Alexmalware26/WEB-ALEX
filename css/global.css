@@ -383,17 +383,17 @@ select:focus {
 
 /* ── Light Mode ── */
 html.light {
-    --dark-color: #f8f3f3;
-    --surface-color: #f0eaea;
-    --card-color: #ffffff;
-    --light-color: #e8e0e0;
+    --dark-color: #e0d6d6;
+    --surface-color: #d8cecе;
+    --card-color: #f5efef;
+    --light-color: #ccc4c4;
     --text-color: #5a5252;
     --text-bright: #1a1010;
-    --border-color: #ddd0d0;
+    --border-color: #c8bebe;
 }
 
 html.light body {
-    background: #f5efef;
+    background: #d8d0d0;
 }
 
 html.light .navbar {
@@ -444,17 +444,17 @@ html.light .faq-item.abierto .faq-pregunta {
 
 html.light .acordeon-body,
 html.light .faq-respuesta {
-    background: #faf6f6;
+    background: #ece4e4;
 }
 
 html.light .contacto-form-wrapper {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(245, 239, 239, 0.9);
 }
 
 html.light .form-group input,
 html.light .form-group textarea {
-    background: #f5efef;
-    border-color: #ddd0d0;
+    background: #ece4e4;
+    border-color: #c8bebe;
     color: #1a1010;
 }
 
