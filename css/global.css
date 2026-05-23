@@ -383,119 +383,206 @@ select:focus {
 
 /* ── Light Mode ── */
 html.light {
-    --dark-color: #e0d6d6;
-    --surface-color: #d8cecе;
-    --card-color: #f5efef;
-    --light-color: #ccc4c4;
-    --text-color: #5a5252;
-    --text-bright: #1a1010;
-    --border-color: #c8bebe;
+    --dark-color: #f0ecec;
+    --surface-color: #e8e2e2;
+    --card-color: #ffffff;
+    --light-color: #ddd6d6;
+    --text-color: #555050;
+    --text-bright: #111010;
+    --border-color: #ddd6d6;
 }
 
 html.light body {
-    background: #d8d0d0;
+    background: #e8e2e2;
 }
 
 html.light .navbar {
-    background: rgba(248, 243, 243, 0.92);
-    border-bottom-color: rgba(225, 29, 72, 0.15);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(225, 29, 72, 0.1);
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom-color: rgba(225, 29, 72, 0.18);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
 html.light .nav-logo {
-    color: #1a1010;
+    color: #111010;
 }
 
 html.light .nav-link {
-    color: #5a5252;
+    color: #555050;
 }
 
 html.light .nav-link:hover {
-    color: #1a1010;
+    color: #111010;
 }
 
+/* Tarjetas con sombra para que destaquen */
+html.light .servicio-card,
+html.light .proceso-step,
+html.light .precio-card,
+html.light .proyecto-card,
+html.light .faq-item,
+html.light .acordeon-item {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    border-color: #e0d8d8;
+}
+
+html.light .servicio-card:hover,
+html.light .proceso-step:hover,
+html.light .precio-card:hover,
+html.light .proyecto-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13), 0 0 20px rgba(225, 29, 72, 0.1);
+}
+
+/* Hero */
 html.light .hero-content h1 {
-    color: #1a1010;
+    color: #111010;
     text-shadow: none;
 }
 
 html.light .hero::before {
-    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.08) 0%, transparent 65%);
+    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.07) 0%, transparent 65%);
 }
 
 html.light .hero::after {
-    background: radial-gradient(ellipse, rgba(255, 45, 85, 0.06) 0%, transparent 65%);
+    background: radial-gradient(ellipse, rgba(255, 45, 85, 0.05) 0%, transparent 65%);
 }
 
+/* Botón outline visible en fondo claro */
+html.light .btn-outline {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #111010;
+}
+
+html.light .btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(225, 29, 72, 0.06);
+}
+
+/* Números/stats: gradiente blanco → rojo se vuelve oscuro → rojo */
+html.light .widget h3,
+html.light .smi-stat strong,
+html.light .precio-precio .cantidad,
+html.light .precio-consulta {
+    background: linear-gradient(135deg, #111010, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Acordeón y FAQ */
 html.light .acordeon-header,
 html.light .faq-pregunta {
     background: #ffffff;
+    color: #111010;
 }
 
 html.light .acordeon-header:hover,
 html.light .faq-pregunta:hover {
-    background: #f5efef;
+    background: #f5f0f0;
 }
 
 html.light .acordeon-item.abierto .acordeon-header,
 html.light .faq-item.abierto .faq-pregunta {
-    background: rgba(225, 29, 72, 0.06);
+    background: rgba(225, 29, 72, 0.05);
+    color: #111010;
 }
 
 html.light .acordeon-body,
 html.light .faq-respuesta {
-    background: #ece4e4;
+    background: #f5f0f0;
 }
 
+/* Formulario */
 html.light .contacto-form-wrapper {
-    background: rgba(245, 239, 239, 0.9);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 html.light .form-group input,
 html.light .form-group textarea {
-    background: #ece4e4;
-    border-color: #c8bebe;
-    color: #1a1010;
+    background: #f5f0f0;
+    border-color: #ddd6d6;
+    color: #111010;
 }
 
+html.light .form-group input::placeholder,
+html.light .form-group textarea::placeholder {
+    color: #999090;
+}
+
+/* Botón ver ejemplo */
+html.light .btn-ver-ejemplo {
+    border-color: rgba(225, 29, 72, 0.3);
+    color: var(--primary-color);
+}
+
+/* Modal */
 html.light .ejemplos-modal-box {
     background: #ffffff;
 }
 
 html.light .ejemplos-modal-header {
-    background: #f5efef;
+    background: #f5f0f0;
+    border-bottom-color: #e0d8d8;
 }
 
+/* Splash */
 html.light .splash {
-    background: #f5efef;
+    background: #e8e2e2;
 }
 
+/* Nav móvil */
 html.light .nav-menu {
-    background: rgba(248, 243, 243, 0.98);
+    background: rgba(255, 255, 255, 0.98);
 }
 
+/* Varios */
 html.light #back-to-top {
     background: #ffffff;
-    border-color: #ddd0d0;
-    color: #5a5252;
+    border-color: #ddd6d6;
+    color: #555050;
 }
 
-html.light .cta-banner {
-    border-color: rgba(225, 29, 72, 0.15);
+html.light #theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #ddd6d6;
+    color: #555050;
 }
 
 html.light .footer {
-    border-top-color: #ddd0d0;
+    border-top-color: #ddd6d6;
 }
 
 html.light .footer-bottom {
-    border-top-color: #ddd0d0;
+    border-top-color: #ddd6d6;
+}
+
+html.light .footer-logo {
+    color: #111010;
 }
 
 html.light .footer-icons a {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: #ddd0d0;
-    color: #5a5252;
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #ddd6d6;
+    color: #555050;
+}
+
+html.light .hero-whatsapp {
+    color: #555050;
+}
+
+html.light .scroll-indicator a {
+    color: #999090;
+}
+
+html.light .skill-tags span {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #ddd6d6;
+    color: #555050;
+}
+
+html.light .precios-nota {
+    color: #777070;
 }
 
 /* Scrollbar personalizado */
