@@ -55,6 +55,9 @@
 
 <body>
 
+    <!-- Barra de progreso de scroll -->
+    <div id="scroll-progress"></div>
+
     <!-- Splash screen -->
     <div id="splash" class="splash">
         <div class="splash-logo">Hades<span>Creative</span></div>
@@ -99,7 +102,11 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <span class="hero-tag">Diseño &amp; Desarrollo Web</span>
-            <h1>Hago realidad la web que <span>imaginaste</span></h1>
+            <div class="disponible-badge">
+                <span class="disponible-dot"></span>
+                Disponible para proyectos
+            </div>
+            <h1 id="hero-h1">Hago realidad la web que <span>imaginaste</span></h1>
             <p>Transformo tu idea en la web o CRM que llevas tiempo buscando, mejora el aspecto de tu negocio fácilmente.</p>
             <div class="hero-buttons">
                 <a href="#contacto" class="btn-primary">Empezar proyecto</a>
@@ -575,6 +582,55 @@
             document.getElementById('modal-close').addEventListener('click', cerrarModal);
             document.querySelector('.ejemplos-modal-overlay').addEventListener('click', cerrarModal);
             document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
+        })();
+    </script>
+
+    <!-- Scroll progress -->
+    <script>
+        (function () {
+            const bar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const total = document.documentElement.scrollHeight - window.innerHeight;
+                bar.style.width = (scrolled / total * 100) + '%';
+            }, { passive: true });
+        })();
+    </script>
+
+    <!-- Typing effect -->
+    <script>
+        (function () {
+            const h1 = document.getElementById('hero-h1');
+            const part1 = 'Hago realidad la web que ';
+            const part2 = 'imaginaste';
+            const speed = 52;
+
+            function runTyping() {
+                h1.style.animation = 'none';
+                h1.innerHTML = '<span class="typing-cursor"></span>';
+                let i = 0;
+
+                function tick() {
+                    if (i < part1.length) {
+                        h1.innerHTML = part1.slice(0, i + 1) + '<span class="typing-cursor"></span>';
+                    } else {
+                        const j = i - part1.length;
+                        h1.innerHTML = part1 + '<span>' + part2.slice(0, j + 1) + '</span><span class="typing-cursor"></span>';
+                    }
+                    i++;
+                    if (i <= part1.length + part2.length) {
+                        setTimeout(tick, speed);
+                    } else {
+                        setTimeout(() => {
+                            h1.innerHTML = part1 + '<span>' + part2 + '</span>';
+                        }, 600);
+                    }
+                }
+                tick();
+            }
+
+            // Arranca cuando desaparece el splash (~1400ms)
+            setTimeout(runTyping, 1500);
         })();
     </script>
 
