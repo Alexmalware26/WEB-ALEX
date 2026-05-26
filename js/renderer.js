@@ -30,7 +30,6 @@ const Renderer = (() => {
         const card = document.createElement('div');
         card.className = CONFIG.CLASSES.SERVICIO_CARD;
         card.innerHTML = `
-            <button class="${CONFIG.CLASSES.DELETE_BTN}" onclick="AdminPanel.eliminarServicio(${index})" title="Eliminar">×</button>
             <i class="fas fa-${servicio.icono}"></i>
             <h3>${escapeHtml(servicio.nombre)}</h3>
             <p>${escapeHtml(servicio.descripcion)}</p>
