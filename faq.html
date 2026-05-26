@@ -46,17 +46,41 @@
 
     <section class="faq faq-page">
         <div class="container">
+
             <div class="faq-page-header">
                 <a href="index.html" class="faq-back"><i class="fas fa-arrow-left"></i> Volver</a>
                 <h1>Preguntas <span>frecuentes</span></h1>
                 <p class="section-subtitle">Todo lo que necesitas saber antes de empezar</p>
+
+                <div class="faq-search-wrap">
+                    <i class="fas fa-search faq-search-icon"></i>
+                    <input
+                        type="text"
+                        id="faq-search"
+                        class="faq-search"
+                        placeholder="Busca una pregunta..."
+                        autocomplete="off"
+                    />
+                </div>
+
+                <div class="faq-cats">
+                    <button class="faq-cat active" data-cat="all">Todas</button>
+                    <button class="faq-cat" data-cat="precio"><i class="fas fa-tag"></i> Precios</button>
+                    <button class="faq-cat" data-cat="plazo"><i class="fas fa-clock"></i> Plazos</button>
+                    <button class="faq-cat" data-cat="tecnico"><i class="fas fa-code"></i> Técnico</button>
+                    <button class="faq-cat" data-cat="proceso"><i class="fas fa-tasks"></i> Proceso</button>
+                </div>
             </div>
 
-            <div class="faq-lista">
+            <div class="faq-lista" id="faq-lista">
 
-                <div class="faq-item">
+                <div class="faq-item" data-cat="plazo">
                     <button class="faq-pregunta">
-                        <span>¿Cuánto tiempo tarda en estar lista mi web?</span>
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">01</span>
+                            <span class="faq-cat-icon"><i class="fas fa-clock"></i></span>
+                            <span>¿Cuánto tiempo tarda en estar lista mi web?</span>
+                        </div>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-respuesta">
@@ -64,9 +88,13 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-cat="precio">
                     <button class="faq-pregunta">
-                        <span>¿El precio incluye dominio y hosting?</span>
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">02</span>
+                            <span class="faq-cat-icon"><i class="fas fa-tag"></i></span>
+                            <span>¿El precio incluye dominio y hosting?</span>
+                        </div>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-respuesta">
@@ -74,9 +102,13 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-cat="tecnico">
                     <button class="faq-pregunta">
-                        <span>¿Puedo modificar la web yo mismo una vez entregada?</span>
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">03</span>
+                            <span class="faq-cat-icon"><i class="fas fa-code"></i></span>
+                            <span>¿Puedo modificar la web yo mismo una vez entregada?</span>
+                        </div>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-respuesta">
@@ -84,9 +116,13 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-cat="proceso">
                     <button class="faq-pregunta">
-                        <span>¿Qué necesito para empezar a trabajar contigo?</span>
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">04</span>
+                            <span class="faq-cat-icon"><i class="fas fa-tasks"></i></span>
+                            <span>¿Qué necesito para empezar a trabajar contigo?</span>
+                        </div>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-respuesta">
@@ -94,9 +130,13 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-cat="proceso">
                     <button class="faq-pregunta">
-                        <span>¿Qué pasa si no me gusta el resultado?</span>
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">05</span>
+                            <span class="faq-cat-icon"><i class="fas fa-shield-alt"></i></span>
+                            <span>¿Qué pasa si no me gusta el resultado?</span>
+                        </div>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-respuesta">
@@ -104,14 +144,96 @@
                     </div>
                 </div>
 
+                <div class="faq-item" data-cat="tecnico">
+                    <button class="faq-pregunta">
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">06</span>
+                            <span class="faq-cat-icon"><i class="fas fa-laptop-code"></i></span>
+                            <span>¿Trabajas con WordPress o solo código propio?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Trabajo principalmente con código propio (HTML, CSS, JavaScript y frameworks modernos), lo que garantiza webs más rápidas, seguras y sin dependencias de plugins. Si el cliente necesita WordPress por alguna razón concreta, también puedo adaptarme.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-cat="proceso">
+                    <button class="faq-pregunta">
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">07</span>
+                            <span class="faq-cat-icon"><i class="fas fa-chart-line"></i></span>
+                            <span>¿Cómo sé en qué punto está mi proyecto?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Durante el desarrollo tendrás acceso a una URL de previsualización donde puedes ver los avances en tiempo real. Además te mantengo informado por WhatsApp con actualizaciones puntuales cada vez que hay cambios importantes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-cat="precio">
+                    <button class="faq-pregunta">
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">08</span>
+                            <span class="faq-cat-icon"><i class="fas fa-tools"></i></span>
+                            <span>¿Ofreces mantenimiento después de entregar la web?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Sí. Ofrezco un servicio de mantenimiento mensual que incluye actualizaciones, corrección de errores y pequeños cambios de contenido. El precio varía según las necesidades del proyecto. Puedes contratarlo desde el inicio o añadirlo después.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-cat="proceso">
+                    <button class="faq-pregunta">
+                        <div class="faq-pregunta-inner">
+                            <span class="faq-num">09</span>
+                            <span class="faq-cat-icon"><i class="fas fa-globe"></i></span>
+                            <span>¿Puedes trabajar con clientes de otros países?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Por supuesto. Trabajo de forma completamente remota, por lo que no hay restricciones geográficas. He trabajado con clientes de España y Latinoamérica. La comunicación es por WhatsApp, email o videollamada, según lo que prefieras.</p>
+                    </div>
+                </div>
+
+                <div class="faq-empty" id="faq-empty" style="display:none;">
+                    <i class="fas fa-search"></i>
+                    <p>No se encontraron preguntas para tu búsqueda.</p>
+                </div>
+
             </div>
 
-            <div class="faq-cta">
-                <p>¿Tienes alguna duda que no aparece aquí?</p>
-                <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="btn-primary">
-                    <i class="fab fa-whatsapp"></i> Pregúntame por WhatsApp
-                </a>
+            <div class="faq-contact-form">
+                <div class="faq-contact-inner">
+                    <div class="faq-contact-header">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>¿No encuentras tu respuesta?</h3>
+                        <p>Escríbeme y te respondo en menos de 24 horas.</p>
+                    </div>
+                    <form id="faq-form" action="https://formspree.io/f/mdajeqvq" method="POST">
+                        <div class="faq-form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+                            <input type="email" name="email" placeholder="Tu email" required autocomplete="email" />
+                        </div>
+                        <textarea name="pregunta" placeholder="¿Cuál es tu duda?" rows="3" required></textarea>
+                        <div class="faq-form-footer">
+                            <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="faq-wa-link">
+                                <i class="fab fa-whatsapp"></i> Respuesta rápida por WhatsApp
+                            </a>
+                            <button type="submit" class="btn-primary faq-submit">
+                                <span class="faq-submit-text">Enviar pregunta</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="faq-form-success" id="faq-success">¡Mensaje enviado! Te respondo pronto.</p>
+                    </form>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -171,6 +293,42 @@
             });
         });
 
+        // FAQ search
+        const searchInput = document.getElementById('faq-search');
+        const faqEmpty = document.getElementById('faq-empty');
+        const allItems = document.querySelectorAll('.faq-item');
+
+        function filterFAQ() {
+            const q = searchInput.value.toLowerCase().trim();
+            const activeCat = document.querySelector('.faq-cat.active').dataset.cat;
+            let visible = 0;
+            allItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const cat = item.dataset.cat;
+                const matchSearch = !q || text.includes(q);
+                const matchCat = activeCat === 'all' || cat === activeCat;
+                if (matchSearch && matchCat) {
+                    item.style.display = '';
+                    visible++;
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('abierto');
+                }
+            });
+            faqEmpty.style.display = visible === 0 ? 'flex' : 'none';
+        }
+
+        searchInput.addEventListener('input', filterFAQ);
+
+        // Category filter
+        document.querySelectorAll('.faq-cat').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.faq-cat').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterFAQ();
+            });
+        });
+
         // Hamburger
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -182,6 +340,31 @@
             if (!e.target.closest('.navbar')) {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
+            }
+        });
+
+        // Contact form
+        const faqForm = document.getElementById('faq-form');
+        const faqSuccess = document.getElementById('faq-success');
+        faqForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = faqForm.querySelector('.faq-submit');
+            btn.disabled = true;
+            btn.querySelector('.faq-submit-text').textContent = 'Enviando...';
+            try {
+                const res = await fetch(faqForm.action, {
+                    method: 'POST',
+                    body: new FormData(faqForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    faqForm.reset();
+                    faqSuccess.style.display = 'block';
+                    setTimeout(() => { faqSuccess.style.display = 'none'; }, 5000);
+                }
+            } finally {
+                btn.disabled = false;
+                btn.querySelector('.faq-submit-text').textContent = 'Enviar pregunta';
             }
         });
     </script>
