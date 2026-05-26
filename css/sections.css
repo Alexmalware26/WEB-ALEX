@@ -906,11 +906,95 @@ section h2::after {
     font-size: 0.85rem;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition-base);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
+}
+
+/* ── FAQ page ── */
+.faq-page {
+    padding-top: 60px;
+    min-height: 80vh;
+}
+
+.faq-page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.faq-page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-bright);
+    margin-bottom: 0.75rem;
+}
+
+.faq-page-header h1 span {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.faq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-base);
+}
+
+.faq-back:hover {
+    color: var(--primary-color);
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.faq-cta p {
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+.faq-cta .btn-primary {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer-icons {
