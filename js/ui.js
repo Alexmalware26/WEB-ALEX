@@ -72,14 +72,12 @@ const UIManager = (() => {
         const navMenu = document.querySelector(CONFIG.SELECTORS.NAV_MENU);
 
         if (hamburger && navMenu) {
-            // Toggle del menú con clase CSS
             hamburger.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navMenu.classList.toggle('active');
                 hamburger.classList.toggle('active');
             });
 
-            // Cerrar menú al hacer clic en un enlace
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navMenu.classList.remove('active');
@@ -87,12 +85,33 @@ const UIManager = (() => {
                 });
             });
 
-            // Cerrar menú al hacer clic fuera
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('.navbar')) {
                     navMenu.classList.remove('active');
                     hamburger.classList.remove('active');
+                    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
                 }
+            });
+        }
+
+        // Dropdown de servicios — clic en móvil, hover en desktop
+        const dropdown = document.querySelector('.nav-dropdown');
+        if (dropdown) {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+            });
+
+            // Cerrar dropdown al hacer clic en un enlace interior
+            dropdown.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    dropdown.classList.remove('open');
+                    if (navMenu) {
+                        navMenu.classList.remove('active');
+                        if (hamburger) hamburger.classList.remove('active');
+                    }
+                });
             });
         }
     };
