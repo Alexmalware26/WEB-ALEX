@@ -598,6 +598,17 @@ html.light .precios-nota {
     color: #777070;
 }
 
+/* Iconos de servicios en modo claro */
+html.light .servicio-card i {
+    color: var(--primary-color);
+    opacity: 0.9;
+}
+
+html.light .servicio-card:hover i {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
 /* Hades en modo claro — más visible y con filtro adaptado */
 html.light .hades-deco {
     opacity: 0.22;
