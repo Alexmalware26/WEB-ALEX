@@ -224,6 +224,117 @@ html.light .disponible-dot {
     }
 }
 
+/* Hero services desplegable */
+.hero-services {
+    margin-top: 1.6rem;
+    display: inline-block;
+    text-align: left;
+    animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.hero-services-toggle {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.hero-services-toggle:hover {
+    background: rgba(225,29,72,0.1);
+    border-color: rgba(225,29,72,0.35);
+    color: var(--text-bright);
+}
+
+.hero-services-icon {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-services-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    margin-top: 0.5rem;
+    background: rgba(10,1,2,0.88);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    min-width: 280px;
+}
+
+.hero-services-panel.open {
+    max-height: 280px;
+    opacity: 1;
+}
+
+.hero-service-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.75rem 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+}
+
+.hero-service-item:last-child {
+    border-bottom: none;
+}
+
+.hero-service-item:hover {
+    background: rgba(225,29,72,0.07);
+}
+
+.hero-service-item i {
+    font-size: 1rem;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.hero-service-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+.hero-service-item span {
+    font-size: 0.75rem;
+    color: var(--text-color);
+}
+
+html.light .hero-services-toggle {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(0,0,0,0.15);
+    color: #555;
+}
+
+html.light .hero-services-panel {
+    background: rgba(255,255,255,0.96);
+    border-color: #ddd6d6;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+html.light .hero-service-item {
+    border-bottom-color: #f0ecec;
+}
+
+html.light .hero-service-item:hover {
+    background: rgba(225,29,72,0.04);
+}
+
 .hero-whatsapp {
     display: inline-flex;
     align-items: center;

@@ -106,7 +106,7 @@
             <div class="nav-logo">Hades<span>Creative</span></div>
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#portafolio" class="nav-link">Proyectos</a></li>
                 <li><a href="#precios" class="nav-link">Precios</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
@@ -135,22 +135,49 @@
             <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="hero-whatsapp">
                 <i class="fab fa-whatsapp"></i> ¿Prefieres hablar por WhatsApp?
             </a>
+
+            <!-- Desplegable de servicios -->
+            <div class="hero-services" id="hero-services">
+                <button class="hero-services-toggle" id="hero-services-btn" aria-expanded="false">
+                    <span>¿Qué puedo hacer por ti?</span>
+                    <i class="fas fa-chevron-down hero-services-icon"></i>
+                </button>
+                <div class="hero-services-panel" id="hero-services-panel">
+                    <div class="hero-service-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <strong>Landing Page</strong>
+                            <span>Presenta tu negocio o producto al mundo</span>
+                        </div>
+                    </div>
+                    <div class="hero-service-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Web Completa</strong>
+                            <span>Múltiples secciones, blog, portafolio</span>
+                        </div>
+                    </div>
+                    <div class="hero-service-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div>
+                            <strong>Tienda Online</strong>
+                            <span>Vende tus productos en internet</span>
+                        </div>
+                    </div>
+                    <div class="hero-service-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <strong>CRM Personalizado</strong>
+                            <span>Gestión a medida para tu empresa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="scroll-indicator">
-            <a href="#servicios" aria-label="Ver más contenido">
+            <a href="#portafolio" aria-label="Ver más contenido">
                 <i class="fas fa-chevron-down"></i>
             </a>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="servicios">
-        <div class="container">
-            <h2>Mis Servicios</h2>
-            <p class="section-subtitle">Soluciones web completas adaptadas a tus necesidades</p>
-            <div class="servicios-grid" id="servicios-grid">
-                <!-- Los servicios se cargarán aquí -->
-            </div>
         </div>
     </section>
 
@@ -623,6 +650,21 @@
             document.getElementById('modal-close').addEventListener('click', cerrarModal);
             document.querySelector('.ejemplos-modal-overlay').addEventListener('click', cerrarModal);
             document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
+        })();
+    </script>
+
+    <!-- Hero services toggle -->
+    <script>
+        (function () {
+            const btn = document.getElementById('hero-services-btn');
+            const panel = document.getElementById('hero-services-panel');
+            if (!btn || !panel) return;
+            btn.addEventListener('click', () => {
+                const open = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !open);
+                panel.classList.toggle('open', !open);
+                btn.querySelector('.hero-services-icon').style.transform = open ? '' : 'rotate(180deg)';
+            });
         })();
     </script>
 
