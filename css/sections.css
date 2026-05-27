@@ -474,58 +474,76 @@ section h2::after {
     background: transparent;
 }
 
-.proceso-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
+/* Proceso compacto — franja horizontal */
+.proceso-strip {
+    padding: 28px 20px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(255,255,255,0.015);
 }
 
-.proceso-step {
-    background: var(--card-color);
-    padding: 2.5rem 2rem;
-    border-radius: var(--radius-lg);
+.proceso-strip-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.proceso-strip-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: 100px;
     text-align: center;
-    border: 1px solid var(--border-color);
     position: relative;
-    overflow: hidden;
-    transition: var(--transition-base);
 }
 
-.proceso-step:hover {
-    transform: translateY(-5px);
-    border-color: rgba(225, 29, 72, 0.35);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(225, 29, 72, 0.08);
-}
-
-.step-number {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 3.5rem;
+.proceso-strip-num {
+    font-size: 0.65rem;
     font-weight: 800;
-    color: rgba(225, 29, 72, 0.08);
-    line-height: 1;
-    pointer-events: none;
-}
-
-.proceso-step i {
-    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    display: block;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
 }
 
-.proceso-step h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.75rem;
+.proceso-strip-step i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    opacity: 0.85;
+}
+
+.proceso-strip-step strong {
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--text-bright);
-    font-weight: 600;
 }
 
-.proceso-step p {
+.proceso-strip-step span {
+    font-size: 0.75rem;
     color: var(--text-color);
-    font-size: 0.95rem;
-    line-height: 1.6;
+}
+
+.proceso-strip-arrow {
+    color: var(--border-color);
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+}
+
+html.light .proceso-strip {
+    background: rgba(0,0,0,0.02);
+    border-color: #ddd6d6;
+}
+
+/* Tech dentro de sobre-mí */
+.sobre-mi-tech {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.2rem;
+    margin-top: 1.2rem;
+    padding: 0;
 }
 
 /* Portafolio */
