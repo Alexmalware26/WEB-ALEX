@@ -15,52 +15,6 @@
     overflow: hidden;
 }
 
-/* Gradiente de fondo dinámico que cambia lentamente */
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: -50%;
-    background: conic-gradient(
-        from 0deg at 40% 50%,
-        rgba(225, 29, 72, 0.12) 0deg,
-        transparent 80deg,
-        rgba(255, 45, 85, 0.08) 160deg,
-        transparent 220deg,
-        rgba(180, 10, 40, 0.1) 300deg,
-        transparent 360deg
-    );
-    pointer-events: none;
-    z-index: 0;
-    animation: heroRotate 18s linear infinite;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background:
-        radial-gradient(ellipse 55% 40% at 20% 60%, rgba(225, 29, 72, 0.16) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 50% at 80% 30%, rgba(255, 45, 85, 0.11) 0%, transparent 70%),
-        radial-gradient(ellipse 30% 30% at 60% 80%, rgba(180, 10, 40, 0.09) 0%, transparent 65%);
-    pointer-events: none;
-    z-index: 0;
-    animation: heroShift 12s ease-in-out infinite alternate;
-}
-
-@keyframes heroRotate {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
-@keyframes heroShift {
-    0%   { transform: scale(1) translate(0, 0); opacity: 0.8; }
-    50%  { transform: scale(1.06) translate(2%, -2%); opacity: 1; }
-    100% { transform: scale(1) translate(-1%, 1%); opacity: 0.85; }
-}
-
 @keyframes orbFloat {
     0%, 100% { transform: translateY(0) scale(1); }
     50%       { transform: translateY(-30px) scale(1.08); }
