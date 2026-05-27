@@ -673,49 +673,20 @@ section h2::after {
 /* Testimonios */
 /* Tech Bar */
 .tech-bar {
-    overflow: hidden;
-    padding: 14px 0;
+    padding: 20px 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     background: rgba(255,255,255,0.02);
-    position: relative;
-}
-
-.tech-bar::before,
-.tech-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.tech-bar::before {
-    left: 0;
-    background: linear-gradient(to right, var(--dark-color), transparent);
-}
-
-.tech-bar::after {
-    right: 0;
-    background: linear-gradient(to left, var(--dark-color), transparent);
 }
 
 .tech-track {
     display: flex;
-    gap: 2.5rem;
-    width: max-content;
-    animation: techScroll 28s linear infinite;
-}
-
-.tech-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes techScroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .tech-item {
