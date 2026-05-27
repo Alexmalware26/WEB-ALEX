@@ -116,8 +116,6 @@ section h2::after {
 .widgets {
     background: transparent;
     padding: 60px 20px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
 }
 
 .widgets-container {
@@ -477,9 +475,6 @@ section h2::after {
 /* Proceso compacto — franja horizontal */
 .proceso-strip {
     padding: 28px 20px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    background: rgba(255,255,255,0.015);
 }
 
 .proceso-strip-grid {
@@ -916,8 +911,6 @@ html.light .testimonio-card:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(225, 29, 72, 0.2);
-    border-bottom: 1px solid rgba(225, 29, 72, 0.2);
 }
 
 .cta-actions {
