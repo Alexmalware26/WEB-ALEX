@@ -218,7 +218,7 @@ select:focus {
 }
 
 .hades-top {
-    top: -40px;
+    top: 30px;
     right: -60px;
     transform: scaleX(-1) rotate(-8deg);
 }
@@ -596,6 +596,39 @@ html.light .skill-tags span {
 
 html.light .precios-nota {
     color: #777070;
+}
+
+/* Hades en modo claro — más visible y con filtro adaptado */
+html.light .hades-deco {
+    opacity: 0.22;
+    filter: drop-shadow(0 0 30px rgba(225,29,72,0.35)) drop-shadow(0 0 60px rgba(180,10,30,0.2)) brightness(0.6) saturate(1.4);
+}
+
+/* Hero orbs más visibles en claro */
+html.light .hero::before {
+    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.12) 0%, transparent 65%);
+}
+
+html.light .hero::after {
+    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.09) 0%, transparent 65%);
+}
+
+/* Línea decorativa bajo h2 más visible en claro */
+html.light section h2::after {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.85;
+}
+
+/* Borde superior de cards en claro más visible */
+html.light .servicio-card::before,
+html.light .proceso-step::before,
+html.light .precio-card::before {
+    opacity: 0.7;
+}
+
+/* Canvas partículas — fondo canvas transparente en claro */
+html.light #hero-canvas {
+    opacity: 0.55;
 }
 
 /* Scrollbar personalizado */

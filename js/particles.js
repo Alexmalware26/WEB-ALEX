@@ -8,12 +8,23 @@
     const COUNT = 65;
     const MAX_DIST = 130;
 
-    const COLORS = [
+    const COLORS_DARK = [
         [225, 29, 72],    // rojo carmesí
         [255, 45, 85],    // rojo brillante
         [240, 240, 240],  // blanco suave
         [180, 20, 50],    // rojo oscuro
     ];
+
+    const COLORS_LIGHT = [
+        [180, 20, 50],    // rojo oscuro
+        [225, 29, 72],    // rojo carmesí
+        [100, 10, 30],    // rojo muy oscuro
+        [90, 90, 110],    // gris azulado
+    ];
+
+    function getColors() {
+        return document.documentElement.classList.contains('light') ? COLORS_LIGHT : COLORS_DARK;
+    }
 
     function resize() {
         canvas.width = window.innerWidth;
@@ -32,7 +43,7 @@
             this.vy = (Math.random() - 0.5) * 0.6;
             this.radius = Math.random() * 1.8 + 0.8;
             this.alpha = Math.random() * 0.5 + 0.25;
-            const c = COLORS[Math.floor(Math.random() * COLORS.length)];
+            const c = getColors()[Math.floor(Math.random() * getColors().length)];
             this.r = c[0];
             this.g = c[1];
             this.b = c[2];
@@ -130,4 +141,10 @@
 
     init();
     animate();
+
+    window.addEventListener('themechange', () => {
+        cancelAnimationFrame(animId);
+        init();
+        animate();
+    });
 })();

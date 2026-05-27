@@ -646,6 +646,7 @@
                 const isLight = html.classList.contains('light');
                 icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
                 localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                window.dispatchEvent(new Event('themechange'));
             });
         })();
     </script>
