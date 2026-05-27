@@ -15,31 +15,50 @@
     overflow: hidden;
 }
 
-
+/* Gradiente de fondo dinámico que cambia lentamente */
 .hero::before {
     content: '';
     position: absolute;
-    top: 20%;
-    left: 15%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(ellipse, rgba(225, 29, 72, 0.14) 0%, transparent 65%);
+    inset: -50%;
+    background: conic-gradient(
+        from 0deg at 40% 50%,
+        rgba(225, 29, 72, 0.12) 0deg,
+        transparent 80deg,
+        rgba(255, 45, 85, 0.08) 160deg,
+        transparent 220deg,
+        rgba(180, 10, 40, 0.1) 300deg,
+        transparent 360deg
+    );
     pointer-events: none;
     z-index: 0;
-    animation: orbFloat 8s ease-in-out infinite;
+    animation: heroRotate 18s linear infinite;
 }
 
 .hero::after {
     content: '';
     position: absolute;
-    bottom: 10%;
-    right: 15%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(255, 45, 85, 0.1) 0%, transparent 65%);
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background:
+        radial-gradient(ellipse 55% 40% at 20% 60%, rgba(225, 29, 72, 0.16) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 80% 30%, rgba(255, 45, 85, 0.11) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 30% at 60% 80%, rgba(180, 10, 40, 0.09) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
-    animation: orbFloat 10s ease-in-out infinite reverse;
+    animation: heroShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes heroShift {
+    0%   { transform: scale(1) translate(0, 0); opacity: 0.8; }
+    50%  { transform: scale(1.06) translate(2%, -2%); opacity: 1; }
+    100% { transform: scale(1) translate(-1%, 1%); opacity: 0.85; }
 }
 
 @keyframes orbFloat {
