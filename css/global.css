@@ -105,6 +105,7 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
     transition: var(--transition-base);
     font-family: inherit;
     letter-spacing: 0.4px;
+    text-decoration: none;
 }
 
 .btn-primary {
