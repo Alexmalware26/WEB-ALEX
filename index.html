@@ -396,10 +396,16 @@
 
             <!-- Comparador de planes -->
             <div class="comparador-wrap">
-                <h3 class="comparador-title">Compara los planes</h3>
-                <p class="comparador-sub">Encuentra el plan que mejor se ajusta a lo que necesitas</p>
+                <button class="comparador-toggle" aria-expanded="false">
+                    <span class="comp-toggle-text">
+                        <i class="fas fa-table"></i>
+                        Comparar planes en detalle
+                    </span>
+                    <i class="fas fa-chevron-down comp-toggle-icon"></i>
+                </button>
 
-                <div class="comparador-scroll">
+                <div class="comparador-panel">
+                    <div class="comparador-scroll">
                     <table class="comparador-tabla">
                         <thead>
                             <tr>
@@ -438,6 +444,7 @@
                             <tr><td>Soporte post-lanzamiento</td><td><i class="fas fa-check yes"></i></td><td><i class="fas fa-check yes"></i></td><td><i class="fas fa-check yes"></i></td></tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

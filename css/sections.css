@@ -2071,16 +2071,35 @@ html.light .pd-tech span {
 }
 
 .precio-card {
-    background: var(--card-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
+    background: linear-gradient(160deg, rgba(20, 6, 10, 0.95) 0%, rgba(12, 3, 6, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 2.2rem 1.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.4rem;
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* Halo gradiente decorativo en cada tarjeta */
+.precio-card::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    width: 140%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+}
+
+.precio-card:hover::after {
+    opacity: 1;
 }
 
 /* Entrada con spring al hacer scroll */
@@ -2103,14 +2122,15 @@ html.light .pd-tech span {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--border-color);
+    background: transparent;
     transition: var(--transition-base);
+    z-index: 1;
 }
 
 .precio-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(225,29,72,0.3);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 25px rgba(225,29,72,0.08);
+    transform: translateY(-8px);
+    border-color: rgba(225,29,72,0.4);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 40px rgba(225,29,72,0.15);
 }
 
 .precio-card:hover::before {
@@ -2118,45 +2138,73 @@ html.light .pd-tech span {
 }
 
 .precio-destacado {
-    border-color: rgba(225,29,72,0.35);
-    box-shadow: 0 8px 32px rgba(225,29,72,0.12);
+    border-color: rgba(225,29,72,0.45);
+    box-shadow: 0 12px 40px rgba(225,29,72,0.18);
+    background: linear-gradient(160deg, rgba(30, 8, 14, 0.95) 0%, rgba(14, 3, 7, 0.95) 100%);
+    transform: scale(1.02);
 }
 
 .precio-destacado::before {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
+.precio-destacado:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
 .precio-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.1rem;
+    right: 1.1rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 3px 10px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 5px 12px;
     border-radius: var(--radius-full);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.35);
+    z-index: 2;
+}
+
+.precio-header {
+    position: relative;
+    z-index: 1;
 }
 
 .precio-header i {
-    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
     color: var(--primary-color);
-    margin-bottom: 0.75rem;
-    display: block;
+    background: linear-gradient(135deg, rgba(225, 29, 72, 0.15), rgba(255, 45, 85, 0.05));
+    border: 1px solid rgba(225, 29, 72, 0.25);
+    border-radius: 14px;
+    margin-bottom: 1.1rem;
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.1);
+    transition: var(--transition-base);
+}
+
+.precio-card:hover .precio-header i {
+    transform: rotate(-6deg) scale(1.08);
+    box-shadow: 0 12px 25px rgba(225, 29, 72, 0.25);
 }
 
 .precio-header h3 {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     color: var(--text-bright);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.4rem;
+    letter-spacing: -0.3px;
 }
 
 .precio-header p {
     color: var(--text-color);
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     line-height: 1.5;
 }
 
@@ -2164,29 +2212,36 @@ html.light .pd-tech span {
     display: flex;
     align-items: baseline;
     gap: 0.4rem;
-    padding: 1rem 0;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    padding: 1.3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    z-index: 1;
 }
 
 .precio-precio .desde {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .precio-precio .cantidad {
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ffffff, var(--primary-color));
+    background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
+    letter-spacing: -1px;
 }
 
 .precio-precio .hasta {
     font-size: 0.9rem;
     color: var(--text-color);
+    font-weight: 500;
 }
 
 .precio-consulta-wrap {
@@ -2206,43 +2261,67 @@ html.light .pd-tech span {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.75rem;
     flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .precio-features li {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.7rem;
     color: var(--text-color);
     font-size: 0.9rem;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.precio-card:hover .precio-features li {
+    color: var(--text-bright);
 }
 
 .precio-features li i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
     color: var(--primary-color);
-    font-size: 0.75rem;
+    background: rgba(225, 29, 72, 0.12);
+    border-radius: 50%;
+    font-size: 0.65rem;
     flex-shrink: 0;
+    transition: var(--transition-base);
+}
+
+.precio-card:hover .precio-features li i {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
 }
 
 .btn-precio {
     display: block;
     text-align: center;
     background: transparent;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(225, 29, 72, 0.3);
     color: var(--text-bright);
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 0.92rem;
     text-decoration: none;
     transition: var(--transition-base);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.3px;
 }
 
 .btn-precio:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-color: transparent;
     color: white;
-    box-shadow: 0 8px 25px rgba(225,29,72,0.35);
+    box-shadow: 0 12px 30px rgba(225,29,72,0.45);
+    transform: translateY(-2px);
 }
 
 .precio-destacado .btn-precio {
@@ -2274,23 +2353,70 @@ html.light .pd-tech span {
 
 /* ── Comparador de planes ── */
 .comparador-wrap {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.comparador-title {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 800;
+.comparador-toggle {
+    background: rgba(225, 29, 72, 0.06);
+    border: 1px solid rgba(225, 29, 72, 0.2);
     color: var(--text-bright);
-    margin-bottom: 0.4rem;
-    letter-spacing: -0.5px;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
 }
 
-.comparador-sub {
-    text-align: center;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
+.comp-toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.comp-toggle-text i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.comp-toggle-icon {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    transition: transform 0.4s ease;
+}
+
+.comparador-toggle:hover {
+    background: rgba(225, 29, 72, 0.12);
+    border-color: rgba(225, 29, 72, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 29, 72, 0.18);
+}
+
+.comparador-toggle.open .comp-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.comparador-panel {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    margin-top: 0;
+}
+
+.comparador-panel.open {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: 2rem;
 }
 
 .comparador-scroll {
@@ -2445,6 +2571,8 @@ html.light .comparador-tabla .no {
     cursor: pointer;
     font-family: inherit;
     transition: var(--transition-base);
+    position: relative;
+    z-index: 1;
 }
 
 .btn-ver-ejemplo:hover {

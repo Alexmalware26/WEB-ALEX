@@ -437,12 +437,23 @@ html.light .nav-link:hover {
 /* Tarjetas con sombra para que destaquen */
 html.light .servicio-card,
 html.light .proceso-step,
-html.light .precio-card,
 html.light .proyecto-card,
 html.light .faq-item,
 html.light .acordeon-item {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
     border-color: #e0d8d8;
+}
+
+html.light .precio-card {
+    background: linear-gradient(160deg, #ffffff 0%, #faf5f5 100%);
+    border-color: #e8e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+html.light .precio-destacado {
+    background: linear-gradient(160deg, #ffffff 0%, #fff5f7 100%);
+    border-color: rgba(225, 29, 72, 0.3);
+    box-shadow: 0 12px 35px rgba(225, 29, 72, 0.1);
 }
 
 html.light .servicio-card:hover,

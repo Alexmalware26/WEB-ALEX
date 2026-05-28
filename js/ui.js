@@ -11,6 +11,22 @@ const UIManager = (() => {
         inicializarContacto();
         inicializarNavegacion();
         inicializarAdminPanel();
+        inicializarComparador();
+    };
+
+    /**
+     * Toggle del comparador de planes
+     */
+    const inicializarComparador = () => {
+        const toggle = document.querySelector('.comparador-toggle');
+        const panel = document.querySelector('.comparador-panel');
+        if (!toggle || !panel) return;
+
+        toggle.addEventListener('click', () => {
+            const open = toggle.classList.toggle('open');
+            panel.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', open);
+        });
     };
 
     /**
