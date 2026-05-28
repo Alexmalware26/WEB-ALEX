@@ -5,26 +5,6 @@
     const hasHover = window.matchMedia('(hover: hover)').matches;
     const lerp = (a, b, t) => a + (b - a) * t;
 
-    // ── Cursor Glow ──
-    if (hasHover) {
-        const glow = document.createElement('div');
-        glow.className = 'cursor-glow';
-        document.body.appendChild(glow);
-
-        const half = 225;
-        let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
-        let cx = tx, cy = ty;
-
-        document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
-
-        (function animGlow() {
-            cx = lerp(cx, tx, 0.07);
-            cy = lerp(cy, ty, 0.07);
-            glow.style.transform = `translate(${cx - half}px, ${cy - half}px)`;
-            requestAnimationFrame(animGlow);
-        })();
-    }
-
     // ── 3D Card Tilt + Shine ──
     if (!hasHover) return;
 
