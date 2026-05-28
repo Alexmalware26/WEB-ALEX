@@ -438,10 +438,26 @@ html.light .nav-link:hover {
 html.light .servicio-card,
 html.light .proceso-step,
 html.light .proyecto-card,
-html.light .faq-item,
 html.light .acordeon-item {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
     border-color: #e0d8d8;
+}
+
+html.light .faq-item {
+    background: linear-gradient(160deg, #ffffff 0%, #faf5f5 100%);
+    border-color: #e8e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+html.light .faq-item:hover {
+    border-color: rgba(225, 29, 72, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1), 0 0 25px rgba(225, 29, 72, 0.08);
+}
+
+html.light .faq-item.abierto {
+    background: linear-gradient(160deg, #ffffff 0%, #fff5f7 100%);
+    border-color: rgba(225, 29, 72, 0.35);
+    box-shadow: 0 12px 35px rgba(225, 29, 72, 0.1);
 }
 
 html.light .precio-card {
@@ -501,26 +517,44 @@ html.light .precio-consulta {
 }
 
 /* Acordeón y FAQ */
-html.light .acordeon-header,
-html.light .faq-pregunta {
+html.light .acordeon-header {
     background: #ffffff;
     color: #111010;
 }
 
-html.light .acordeon-header:hover,
-html.light .faq-pregunta:hover {
+html.light .acordeon-header:hover {
     background: #f5f0f0;
 }
 
-html.light .acordeon-item.abierto .acordeon-header,
-html.light .faq-item.abierto .faq-pregunta {
+html.light .faq-pregunta {
+    background: transparent;
+    color: #111010;
+}
+
+html.light .faq-pregunta:hover {
+    background: rgba(225, 29, 72, 0.04);
+}
+
+html.light .acordeon-item.abierto .acordeon-header {
     background: rgba(225, 29, 72, 0.05);
     color: #111010;
 }
 
-html.light .acordeon-body,
-html.light .faq-respuesta {
+html.light .faq-item.abierto .faq-pregunta {
+    background: rgba(225, 29, 72, 0.06);
+    color: #111010;
+}
+
+html.light .acordeon-body {
     background: #f5f0f0;
+}
+
+html.light .faq-respuesta {
+    background: transparent;
+}
+
+html.light .faq-respuesta p {
+    border-top-color: rgba(225, 29, 72, 0.15);
 }
 
 /* Formulario */
