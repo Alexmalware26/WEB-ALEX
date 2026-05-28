@@ -2083,6 +2083,19 @@ html.light .pd-tech span {
     overflow: hidden;
 }
 
+/* Entrada con spring al hacer scroll */
+.precio-card.fade-in {
+    opacity: 0;
+    transform: translateY(70px) scale(0.94);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.precio-card.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 .precio-card::before {
     content: '';
     position: absolute;

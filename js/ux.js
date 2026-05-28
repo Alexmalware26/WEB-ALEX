@@ -15,6 +15,7 @@
         '.widget',
         '.proceso-step',
         '.proyecto-card',
+        '.precio-card',
         '.acordeon-item',
         '.contacto-info',
         '.contacto-form-wrapper',
