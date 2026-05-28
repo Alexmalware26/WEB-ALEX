@@ -2272,6 +2272,163 @@ html.light .pd-tech span {
     opacity: 0.7;
 }
 
+/* ── Comparador de planes ── */
+.comparador-wrap {
+    margin-top: 4rem;
+}
+
+.comparador-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-bright);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+}
+
+.comparador-sub {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.comparador-scroll {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    background: rgba(15, 5, 8, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.comparador-tabla {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.comparador-tabla thead th {
+    background: rgba(225, 29, 72, 0.08);
+    padding: 1.1rem 1rem;
+    text-align: center;
+    color: var(--text-bright);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-bottom: 2px solid rgba(225, 29, 72, 0.25);
+    white-space: nowrap;
+}
+
+.comparador-tabla thead th i {
+    color: var(--primary-color);
+    margin-right: 0.45rem;
+}
+
+.comparador-tabla th.comp-feat-col {
+    text-align: left;
+    background: rgba(225, 29, 72, 0.04);
+    min-width: 260px;
+}
+
+.comparador-tabla tbody td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.comparador-tabla tbody td:first-child {
+    text-align: left;
+    color: var(--text-bright);
+    font-weight: 500;
+}
+
+.comparador-tabla tr.comp-cat td {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(225, 29, 72, 0.15);
+}
+
+.comparador-tabla tr.comp-cat td i {
+    margin-right: 0.5rem;
+    opacity: 0.8;
+}
+
+.comparador-tabla tbody tr:not(.comp-cat):hover td {
+    background: rgba(225, 29, 72, 0.04);
+}
+
+.comparador-tabla .yes {
+    color: #22c55e;
+    font-size: 1rem;
+}
+
+.comparador-tabla .no {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+/* Light mode */
+html.light .comparador-scroll {
+    background: #ffffff;
+    border-color: #e0d8d8;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+html.light .comparador-tabla thead th {
+    background: rgba(225, 29, 72, 0.06);
+    color: #111010;
+    border-bottom-color: rgba(225, 29, 72, 0.2);
+}
+
+html.light .comparador-tabla tbody td {
+    border-bottom-color: #f0ecec;
+    color: #555050;
+}
+
+html.light .comparador-tabla tbody td:first-child {
+    color: #111010;
+}
+
+html.light .comparador-tabla tr.comp-cat td {
+    background: #faf5f5;
+    border-bottom-color: rgba(225, 29, 72, 0.18);
+}
+
+html.light .comparador-tabla tbody tr:not(.comp-cat):hover td {
+    background: rgba(225, 29, 72, 0.03);
+}
+
+html.light .comparador-tabla .yes {
+    color: #16a34a;
+}
+
+html.light .comparador-tabla .no {
+    color: #c4b8b8;
+}
+
+@media (max-width: 768px) {
+    .comparador-title {
+        font-size: 1.4rem;
+    }
+    .comparador-tabla {
+        font-size: 0.85rem;
+    }
+    .comparador-tabla thead th {
+        padding: 0.8rem 0.6rem;
+        font-size: 0.85rem;
+    }
+    .comparador-tabla tbody td {
+        padding: 0.65rem 0.7rem;
+    }
+}
+
 .btn-ver-ejemplo {
     display: flex;
     align-items: center;
