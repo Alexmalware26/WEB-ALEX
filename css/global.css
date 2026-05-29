@@ -44,6 +44,18 @@ html {
     background: #0a0101;
 }
 
+@media (max-width: 480px) {
+    html {
+        zoom: 0.82;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        zoom: 0.88;
+    }
+}
+
 @media (min-width: 1024px) {
     html {
         zoom: 0.75;
@@ -105,7 +117,23 @@ html.light body::before {
     background: radial-gradient(ellipse at center, rgba(232, 226, 226, 0.45) 0%, rgba(232, 226, 226, 0.65) 100%);
 }
 
-/* Compensar el zoom: 0.75 del html en >= 1024px para que el canvas cubra el viewport real */
+/* Compensar el zoom del html para que el canvas cubra el viewport real */
+@media (max-width: 480px) {
+    #smoke-bg {
+        zoom: 1.2195;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #smoke-bg {
+        zoom: 1.1363;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
 @media (min-width: 1024px) {
     #smoke-bg {
         zoom: 1.333333;
