@@ -265,10 +265,7 @@ section h2::after {
 }
 
 .contacto-info h2 span {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
 }
 
 .contacto-info > p {
