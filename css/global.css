@@ -346,10 +346,11 @@ select:focus {
     z-index: 999;
     width: 44px;
     height: 44px;
-    background: var(--card-color);
-    border: 1px solid var(--border-color);
+    background: rgba(8, 1, 2, 0.85);
+    border: 1px solid rgba(220, 0, 32, 0.5);
     border-radius: var(--radius-md);
-    color: var(--text-color);
+    color: #ffeaea;
+    backdrop-filter: blur(10px);
     font-size: 1rem;
     cursor: pointer;
     display: flex;

@@ -1129,9 +1129,10 @@ section h2::after {
 .footer-logo {
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--text-bright);
+    color: #ffffff;
     margin-bottom: 0.75rem;
     letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 .footer-brand p {
@@ -1859,11 +1860,13 @@ section h2::after {
     justify-content: center;
     width: 42px;
     height: 42px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border-color);
+    background: rgba(8, 1, 2, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-md);
-    color: var(--text-color);
+    color: #ffeaea;
     font-size: 1.1rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     transition: var(--transition-base);
 }
@@ -2440,20 +2443,23 @@ section h2::after {
 }
 
 .comparador-toggle {
-    background: rgba(225, 29, 72, 0.06);
-    border: 1px solid rgba(225, 29, 72, 0.2);
-    color: var(--text-bright);
+    background: rgba(8, 1, 2, 0.7);
+    border: 1px solid rgba(225, 29, 72, 0.45);
+    color: #ffffff;
     padding: 12px 24px;
     border-radius: var(--radius-full);
     font-family: inherit;
-    font-size: 0.92rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 1rem;
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .comp-toggle-text {
