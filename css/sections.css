@@ -290,17 +290,18 @@ section h2::after {
 }
 
 .contacto-item-icon {
-    width: 46px;
-    height: 46px;
-    background: rgba(225, 29, 72, 0.1);
-    border: 1px solid rgba(225, 29, 72, 0.25);
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color);
-    font-size: 1.1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
     flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(220, 0, 32, 0.5), 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .contacto-item strong {
