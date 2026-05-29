@@ -38,12 +38,12 @@ void main(){
   vec2 uv = (FC/R - 0.5) * vec2(R.x/R.y, 1.0) * 2.0;
   vec3 col=vec3(1);
 
-  float n=fbm(uv*.6-vec2(T*.015,T*.005));
-  n=noise(uv*2.5+n*2.);
+  float n=fbm(uv*.75-vec2(T*.04,T*.06));
+  n=noise(uv*3.2+n*3.5);
 
-  col.r-=fbm(uv*1.4+vec2(T*.005,T*.02)+n);
-  col.g-=fbm(uv*1.405+vec2(T*.005,T*.02)+n+.004);
-  col.b-=fbm(uv*1.41+vec2(T*.005,T*.02)+n+.008);
+  col.r-=fbm(uv*1.6+vec2(T*.02,T*.07)+n);
+  col.g-=fbm(uv*1.605+vec2(T*.02,T*.07)+n+.004);
+  col.b-=fbm(uv*1.61+vec2(T*.02,T*.07)+n+.008);
 
   col=mix(col, u_color, dot(col,vec3(.21,.71,.07)));
 
