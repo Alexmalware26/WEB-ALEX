@@ -35,15 +35,15 @@ float noise(vec2 p){ vec2 i=floor(p),f=fract(p),u=f*f*(3.-2.*f); return mix(mix(
 float fbm(vec2 p){ float t=.0,a=1.; for(int i=0;i<5;i++){ t+=a*noise(p); p*=mat2(1,-1.2,.2,1.2)*2.; a*=.5; } return t; }
 
 void main(){
-  vec2 uv=(FC-.5*R)/min(R.x,R.y);
+  vec2 uv = (FC/R - 0.5) * vec2(R.x/R.y, 1.0) * 2.0;
   vec3 col=vec3(1);
 
-  float n=fbm(uv*.5-vec2(T*.01,0));
-  n=noise(uv*3.+n*2.);
+  float n=fbm(uv*.6-vec2(T*.015,T*.005));
+  n=noise(uv*2.5+n*2.);
 
-  col.r-=fbm(uv*1.2+vec2(0,T*.015)+n);
-  col.g-=fbm(uv*1.205+vec2(0,T*.015)+n+.003);
-  col.b-=fbm(uv*1.21+vec2(0,T*.015)+n+.006);
+  col.r-=fbm(uv*1.4+vec2(T*.005,T*.02)+n);
+  col.g-=fbm(uv*1.405+vec2(T*.005,T*.02)+n+.004);
+  col.b-=fbm(uv*1.41+vec2(T*.005,T*.02)+n+.008);
 
   col=mix(col, u_color, dot(col,vec3(.21,.71,.07)));
   col=mix(vec3(.05),col,min(time*.1,1.));
@@ -98,13 +98,18 @@ void main(){
 
     const resize = () => {
         const dpr = Math.max(1, window.devicePixelRatio);
-        canvas.width = window.innerWidth * dpr;
-        canvas.height = window.innerHeight * dpr;
+        const w = canvas.clientWidth || window.innerWidth;
+        const h = canvas.clientHeight || window.innerHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
         gl.viewport(0, 0, canvas.width, canvas.height);
     };
 
     resize();
+    requestAnimationFrame(resize);
+    setTimeout(resize, 100);
     window.addEventListener('resize', resize);
+    window.addEventListener('load', resize);
     window.addEventListener('themechange', () => { color = getColor(); });
 
     const render = (now) => {

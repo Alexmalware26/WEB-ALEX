@@ -81,12 +81,23 @@ body {
 
 #smoke-bg {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 1;
     pointer-events: none;
     opacity: 1;
+    display: block;
+}
+
+/* Compensar el zoom: 0.75 del html en >= 1024px para que el canvas cubra el viewport real */
+@media (min-width: 1024px) {
+    #smoke-bg {
+        zoom: 1.333333;
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
 html.light #smoke-bg {
