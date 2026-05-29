@@ -46,8 +46,15 @@ void main(){
   col.b-=fbm(uv*1.41+vec2(T*.005,T*.02)+n+.008);
 
   col=mix(col, u_color, dot(col,vec3(.21,.71,.07)));
-  col=mix(vec3(.05),col,min(time*.1,1.));
-  col=clamp(col,.05,1.);
+
+  // Laser intensity: saturar rojo, atenuar verde/azul
+  float lum = dot(col, vec3(.21,.71,.07));
+  col.r = pow(max(col.r, 0.0), 0.55) * 1.35 + lum * 0.35;
+  col.g = col.g * 0.38;
+  col.b = col.b * 0.32;
+
+  col=mix(vec3(.03),col,min(time*.1,1.));
+  col=clamp(col, 0.0, 1.0);
   O=vec4(col,1);
 }`;
 
@@ -60,7 +67,7 @@ void main(){
         ] : [0.5, 0.5, 0.5];
     };
 
-    const getColor = () => hexToRgb('#e11d48');
+    const getColor = () => hexToRgb('#ff0844');
 
     const compile = (shader, source) => {
         gl.shaderSource(shader, source);
