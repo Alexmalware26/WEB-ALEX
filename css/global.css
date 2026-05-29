@@ -41,6 +41,7 @@
 
 html {
     scroll-behavior: smooth;
+    background: #0a0101;
 }
 
 @media (min-width: 1024px) {
@@ -52,7 +53,7 @@ html {
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
-    background: #0a0101;
+    background: transparent;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -417,8 +418,12 @@ html.light {
     --border-color: #ddd6d6;
 }
 
-html.light body {
+html.light {
     background: #e8e2e2;
+}
+
+html.light body {
+    background: transparent;
 }
 
 html.light .navbar {
