@@ -2394,13 +2394,74 @@ html.light .pd-tech span {
     position: relative;
     z-index: 1;
     letter-spacing: 0.3px;
+    overflow: visible;
+}
+
+/* Chispa eléctrica central que aparece y se expande */
+.btn-precio::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow:
+        24px -22px 0 rgba(225, 29, 72, 0.9),
+        -28px -18px 0 rgba(255, 255, 255, 0.85),
+        32px 18px 0 rgba(255, 45, 85, 0.9),
+        -22px 24px 0 rgba(255, 255, 255, 0.8),
+        40px -6px 0 rgba(225, 29, 72, 0.7),
+        -38px 8px 0 rgba(255, 45, 85, 0.7),
+        14px -32px 0 rgba(255, 255, 255, 0.75),
+        -14px 30px 0 rgba(225, 29, 72, 0.75);
+    filter: drop-shadow(0 0 4px rgba(225, 29, 72, 0.9));
+}
+
+/* Rayos diagonales que cruzan el botón al hacer hover */
+.btn-precio::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: var(--radius-full);
+    pointer-events: none;
+    opacity: 0;
+    background:
+        linear-gradient(75deg, transparent 38%, rgba(255, 255, 255, 0.85) 50%, transparent 62%),
+        linear-gradient(105deg, transparent 38%, rgba(225, 29, 72, 0.8) 50%, transparent 62%);
+    mix-blend-mode: screen;
+    filter: blur(0.5px);
+}
+
+.btn-precio:hover::before {
+    animation: btnSparks 0.65s ease-out forwards;
+}
+
+.btn-precio:hover::after {
+    animation: btnLightning 0.6s ease-out forwards;
+}
+
+@keyframes btnSparks {
+    0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+    35%  { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
+}
+
+@keyframes btnLightning {
+    0%   { opacity: 0; background-position: -100% 0, 100% 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; background-position: 100% 0, -100% 0; }
 }
 
 .btn-precio:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-color: transparent;
     color: white;
-    box-shadow: 0 12px 30px rgba(225,29,72,0.45);
+    box-shadow: 0 12px 30px rgba(225,29,72,0.45), 0 0 30px rgba(225, 29, 72, 0.5);
     transform: translateY(-2px);
 }
 
