@@ -3,8 +3,8 @@
  */
 
 .navbar {
-    background: rgba(8, 1, 2, 0.92);
-    backdrop-filter: blur(18px);
+    background: rgba(8, 1, 2, 0.95);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 1rem 0;
     position: sticky;

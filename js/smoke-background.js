@@ -97,11 +97,10 @@ void main(){
     let color = getColor();
 
     const resize = () => {
-        const dpr = Math.max(1, window.devicePixelRatio);
         const w = canvas.clientWidth || window.innerWidth;
         const h = canvas.clientHeight || window.innerHeight;
-        canvas.width = w * dpr;
-        canvas.height = h * dpr;
+        canvas.width = Math.floor(w * 0.75);
+        canvas.height = Math.floor(h * 0.75);
         gl.viewport(0, 0, canvas.width, canvas.height);
     };
 
@@ -112,14 +111,18 @@ void main(){
     window.addEventListener('load', resize);
     window.addEventListener('themechange', () => { color = getColor(); });
 
+    let lastFrame = 0;
+    const targetInterval = 1000 / 30;
     const render = (now) => {
+        requestAnimationFrame(render);
+        if (now - lastFrame < targetInterval) return;
+        lastFrame = now;
         gl.useProgram(program);
         gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
         gl.uniform2f(uRes, canvas.width, canvas.height);
         gl.uniform1f(uTime, now * 1e-3);
         gl.uniform3fv(uColor, color);
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-        requestAnimationFrame(render);
     };
     render(0);
 })();
