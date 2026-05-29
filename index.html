@@ -111,8 +111,6 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <canvas id="hero-canvas"></canvas>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
@@ -158,9 +156,6 @@
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <div class="nav-actions">
-                <button id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun"></i>
-                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -676,30 +671,8 @@
         })();
     </script>
 
-    <script>
-        (function () {
-            const toggle = document.getElementById('theme-toggle');
-            const icon = toggle.querySelector('i');
-            const html = document.documentElement;
-
-            if (localStorage.getItem('theme') === 'light') {
-                html.classList.add('light');
-                icon.className = 'fas fa-moon';
-            }
-
-            toggle.addEventListener('click', () => {
-                html.classList.toggle('light');
-                const isLight = html.classList.contains('light');
-                icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-                window.dispatchEvent(new Event('themechange'));
-            });
-        })();
-    </script>
-
     <!-- Scripts modulares -->
     <script src="js/smoke-background.js"></script>
-    <script src="js/particles.js"></script>
     <script src="js/effects.js"></script>
     <script src="js/ux.js"></script>
     <script src="js/config.js"></script>

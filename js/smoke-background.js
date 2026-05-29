@@ -60,11 +60,7 @@ void main(){
         ] : [0.5, 0.5, 0.5];
     };
 
-    const getColor = () => {
-        return document.documentElement.classList.contains('light')
-            ? hexToRgb('#e11d48')
-            : hexToRgb('#e11d48');
-    };
+    const getColor = () => hexToRgb('#e11d48');
 
     const compile = (shader, source) => {
         gl.shaderSource(shader, source);
@@ -109,7 +105,6 @@ void main(){
     setTimeout(resize, 100);
     window.addEventListener('resize', resize);
     window.addEventListener('load', resize);
-    window.addEventListener('themechange', () => { color = getColor(); });
 
     let lastFrame = 0;
     const targetInterval = 1000 / 30;

@@ -36,7 +36,6 @@
 <body>
 
     <div id="scroll-progress"></div>
-    <canvas id="hero-canvas"></canvas>
 
     <nav class="navbar">
         <div class="container">
@@ -48,9 +47,6 @@
                 <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <div class="nav-actions">
-                <button id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun"></i>
-                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -217,23 +213,6 @@
             }, { passive: true });
         })();
 
-        // Theme toggle
-        (function () {
-            const toggle = document.getElementById('theme-toggle');
-            const icon = toggle.querySelector('i');
-            const html = document.documentElement;
-            if (localStorage.getItem('theme') === 'light') {
-                html.classList.add('light');
-                icon.className = 'fas fa-moon';
-            }
-            toggle.addEventListener('click', () => {
-                html.classList.toggle('light');
-                const isLight = html.classList.contains('light');
-                icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            });
-        })();
-
         // Hamburger
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -259,8 +238,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.proyecto-detalle').forEach(el => observer.observe(el));
     </script>
-
-    <script src="js/particles.js"></script>
 
 </body>
 </html>

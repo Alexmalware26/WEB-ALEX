@@ -69,16 +69,6 @@
     50%       { opacity: 0; }
 }
 
-html.light .disponible-badge {
-    background: rgba(34, 197, 94, 0.08);
-    color: #16a34a;
-    border-color: rgba(34, 197, 94, 0.25);
-}
-
-html.light .disponible-dot {
-    background: #16a34a;
-}
-
 .hero-tag {
     display: inline-block;
     background: rgba(225, 29, 72, 0.1);
@@ -281,26 +271,6 @@ html.light .disponible-dot {
 .hero-service-item span {
     font-size: 0.75rem;
     color: var(--text-color);
-}
-
-html.light .hero-services-toggle {
-    background: rgba(0,0,0,0.05);
-    border-color: rgba(0,0,0,0.15);
-    color: #555;
-}
-
-html.light .hero-services-panel {
-    background: rgba(255,255,255,0.96);
-    border-color: #ddd6d6;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-html.light .hero-service-item {
-    border-bottom-color: #f0ecec;
-}
-
-html.light .hero-service-item:hover {
-    background: rgba(225,29,72,0.04);
 }
 
 .hero-whatsapp {
