@@ -100,7 +100,7 @@ html.light .disponible-dot {
     font-weight: 800;
     color: #ffffff;
     letter-spacing: -1px;
-    text-shadow: 0 0 50px rgba(225, 29, 72, 0.35);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 50px rgba(225, 29, 72, 0.35);
     animation: fadeInDown 0.8s ease;
 }
 
@@ -126,11 +126,12 @@ html.light .disponible-dot {
 
 .hero-content p {
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: #d0c8c8;
     animation: fadeInUp 0.8s ease 0.2s both;
     max-width: 580px;
     margin: 0 auto 2.5rem;
     line-height: 1.7;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .hero-buttons {

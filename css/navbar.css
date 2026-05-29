@@ -3,15 +3,15 @@
  */
 
 .navbar {
-    background: rgba(8, 1, 2, 0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(8, 1, 2, 0.92);
+    backdrop-filter: blur(18px);
     color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(225, 29, 72, 0.12);
-    border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.85), 0 1px 0 rgba(225, 29, 72, 0.15);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.25);
 }
 
 .navbar .container {

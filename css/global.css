@@ -91,6 +91,20 @@ body {
     display: block;
 }
 
+/* Overlay oscuro sutil sobre el humo para mejorar legibilidad del contenido */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+html.light body::before {
+    background: radial-gradient(ellipse at center, rgba(232, 226, 226, 0.45) 0%, rgba(232, 226, 226, 0.65) 100%);
+}
+
 /* Compensar el zoom: 0.75 del html en >= 1024px para que el canvas cubra el viewport real */
 @media (min-width: 1024px) {
     #smoke-bg {
