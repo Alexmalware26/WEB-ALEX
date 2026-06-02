@@ -3,12 +3,17 @@
  */
 
 .navbar {
-    background: transparent;
+    background: rgba(8, 1, 2, 0.85);
+    backdrop-filter: blur(14px);
     color: white;
     padding: 1.4rem 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .container {

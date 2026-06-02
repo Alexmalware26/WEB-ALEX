@@ -68,6 +68,7 @@ body {
     background: transparent;
     min-height: 100vh;
     line-height: 1.6;
+    padding-top: 80px;
 }
 
 @keyframes animatedGradient {
