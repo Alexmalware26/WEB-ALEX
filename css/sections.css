@@ -65,12 +65,15 @@ section h2::after {
     background: var(--card-color);
     padding: 2rem;
     border-radius: var(--radius-lg);
-    text-align: center;
+    text-align: left;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
     border: 1px solid var(--border-color);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
 }
 
 .servicio-card::before {
@@ -113,6 +116,30 @@ section h2::after {
     color: var(--text-color);
     line-height: 1.6;
     font-size: 0.95rem;
+    flex: 1;
+}
+
+.servicio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
+    margin-top: 1.25rem;
+    color: var(--text-bright);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+}
+
+.servicio-link i {
+    font-size: 0.85rem;
+    margin: 0;
+    color: currentColor;
+}
+
+.servicio-link:hover {
+    color: var(--secondary-color);
 }
 
 /* Stats strip */

@@ -66,7 +66,7 @@ const CONFIG = {
             },
             {
                 titulo: "GitHub",
-                url: "https://github.com",
+                url: "https://github.com/Alexmalware26",
                 icono: "github"
             }
         ]

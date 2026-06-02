@@ -82,14 +82,6 @@
     }
     </script>
 
-    <!-- Google Analytics 4 — sustituir G-XXXXXXXXXX por tu ID real -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
-    </script>
 </head>
 
 <body>
@@ -123,7 +115,7 @@
                     </button>
                     <ul class="nav-dropdown-menu">
                         <li>
-                            <a href="#contacto">
+                            <a href="#servicio-web">
                                 <i class="fas fa-globe"></i>
                                 <span>
                                     <strong>Web Completa</strong>
@@ -132,7 +124,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#contacto">
+                            <a href="#servicio-tienda">
                                 <i class="fas fa-shopping-cart"></i>
                                 <span>
                                     <strong>Tienda Online</strong>
@@ -141,7 +133,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#contacto">
+                            <a href="#servicio-crm">
                                 <i class="fas fa-briefcase"></i>
                                 <span>
                                     <strong>CRM Personalizado</strong>
@@ -180,9 +172,62 @@
 
         </div>
         <div class="scroll-indicator">
-            <a href="#portafolio" aria-label="Ver más contenido">
+            <a href="#servicios" aria-label="Ver más contenido">
                 <i class="fas fa-chevron-down"></i>
             </a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <p class="section-subtitle">Soluciones digitales pensadas para que tu negocio se vea mejor, funcione mejor y convierta mejor.</p>
+            <div class="servicios-grid">
+
+                <article class="servicio-card" id="servicio-web">
+                    <i class="fas fa-globe"></i>
+                    <h3>Webs profesionales</h3>
+                    <p>Diseño y desarrollo webs modernas, rápidas y adaptadas a móvil, tablet y escritorio.</p>
+                    <a href="#precios" class="servicio-link">Ver precios <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="servicio-card" id="servicio-tienda">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Tiendas online</h3>
+                    <p>Catálogos, carritos, pagos y una experiencia clara para que tus clientes compren sin fricción.</p>
+                    <a href="#precios" class="servicio-link">Ver precios <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="servicio-card" id="servicio-crm">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>CRM personalizado</h3>
+                    <p>Sistemas internos para gestionar clientes, incidencias, inventario y procesos de tu empresa.</p>
+                    <a href="#precios" class="servicio-link">Comparar opciones <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="servicio-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Automatizaciones</h3>
+                    <p>Flujos simples para ahorrar tiempo: formularios, avisos, integraciones y tareas repetitivas.</p>
+                    <a href="#contacto" class="servicio-link">Consultar <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="servicio-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Mantenimiento web</h3>
+                    <p>Actualizaciones, ajustes visuales, revisión de errores y soporte después del lanzamiento.</p>
+                    <a href="#contacto" class="servicio-link">Pedir soporte <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="servicio-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>SEO y rendimiento</h3>
+                    <p>Optimización de velocidad, estructura, metadatos y detalles técnicos para posicionar mejor.</p>
+                    <a href="#contacto" class="servicio-link">Mejorar mi web <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+            </div>
         </div>
     </section>
 
@@ -505,7 +550,7 @@
                         aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                    <a href="https://github.com/Alexmalware26" target="_blank" rel="noopener" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="mailto:sativezip@gmail.com" aria-label="Email">
