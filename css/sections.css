@@ -324,16 +324,53 @@ section h2::after {
 .contacto-item-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0a0a0e;
-    font-size: 1.2rem;
+    color: #ffffff;
+    font-size: 1.3rem;
     flex-shrink: 0;
-    box-shadow: 0 6px 18px rgba(200, 204, 210, 0.25), 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-item:hover .contacto-item-icon {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* WhatsApp: verde oficial */
+.icon-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.contacto-item:hover .icon-whatsapp {
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.5), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Gmail: rojo oficial */
+.icon-gmail {
+    background: linear-gradient(135deg, #EA4335, #C5221F);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 18px rgba(234, 67, 53, 0.35), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.contacto-item:hover .icon-gmail {
+    box-shadow: 0 10px 24px rgba(234, 67, 53, 0.5), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Reloj: azul tipo "respuesta rápida" */
+.icon-clock {
+    background: linear-gradient(135deg, #4F8EF7, #1A6BD8);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 18px rgba(79, 142, 247, 0.35), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.contacto-item:hover .icon-clock {
+    box-shadow: 0 10px 24px rgba(79, 142, 247, 0.5), 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .contacto-item strong {
