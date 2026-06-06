@@ -329,7 +329,6 @@
                         <li><i class="fas fa-check"></i> Visual en móvil, tablet y TV</li>
                         <li><i class="fas fa-check"></i> Configuración de políticas y cookies</li>
                     </ul>
-                    <button class="btn-ver-ejemplo" data-url="https://esmelek-web.vercel.app" data-plan="Web Completa"><i class="fas fa-eye"></i> Ver ejemplo</button>
                     <a href="#contacto" class="btn-precio">Solicitar presupuesto</a>
                 </div>
 
@@ -352,7 +351,6 @@
                         <li><i class="fas fa-check"></i> Analítica de estadísticas</li>
                         <li><i class="fas fa-info-circle"></i> A consultar más especificaciones</li>
                     </ul>
-                    <button class="btn-ver-ejemplo" data-url="" data-plan="Tienda Online"><i class="fas fa-eye"></i> Ver ejemplo</button>
                     <a href="#contacto" class="btn-precio">Solicitar presupuesto</a>
                 </div>
 
@@ -372,7 +370,6 @@
                         <li><i class="fas fa-check"></i> Acceso a cuentas ilimitadas</li>
                         <li><i class="fas fa-check"></i> Inventario de productos</li>
                     </ul>
-                    <button class="btn-ver-ejemplo" data-url="" data-plan="CRM Personalizado"><i class="fas fa-eye"></i> Ver ejemplo</button>
                     <a href="#contacto" class="btn-precio">Hablemos</a>
                 </div>
 
@@ -526,32 +523,6 @@
     </footer>
 
 
-    <!-- Modal ejemplos -->
-    <div id="ejemplos-modal" class="ejemplos-modal" aria-hidden="true">
-        <div class="ejemplos-modal-overlay"></div>
-        <div class="ejemplos-modal-box">
-            <div class="ejemplos-modal-header">
-                <span id="modal-plan-nombre"></span>
-                <div class="modal-header-actions">
-                    <a id="modal-plan-link" href="#" target="_blank" rel="noopener" class="modal-open-link">
-                        <i class="fas fa-external-link-alt"></i> Abrir sitio
-                    </a>
-                    <button class="modal-close-btn" id="modal-close" aria-label="Cerrar">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="ejemplos-modal-body">
-                <iframe id="modal-iframe" src="" frameborder="0" title="Ejemplo de proyecto" allowfullscreen></iframe>
-                <div id="modal-proximamente" class="modal-proximamente">
-                    <i class="fas fa-hammer"></i>
-                    <h3>Próximamente</h3>
-                    <p>Estamos preparando ejemplos para este tipo de proyecto</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- WhatsApp flotante -->
     <a href="https://wa.me/34655080442" target="_blank" rel="noopener" class="whatsapp-float"
         aria-label="Contactar por WhatsApp">
@@ -580,54 +551,6 @@
                 if (!abierto) item.classList.add('abierto');
             });
         });
-    </script>
-
-    <script>
-        (function () {
-            const modal = document.getElementById('ejemplos-modal');
-            const iframe = document.getElementById('modal-iframe');
-            const proximamente = document.getElementById('modal-proximamente');
-            const nombreEl = document.getElementById('modal-plan-nombre');
-            const linkEl = document.getElementById('modal-plan-link');
-
-            document.querySelectorAll('.btn-ver-ejemplo').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    let url = btn.dataset.url;
-                    const plan = btn.dataset.plan;
-
-                    if (url === 'self') url = window.location.origin + window.location.pathname;
-
-                    nombreEl.textContent = plan;
-                    modal.classList.add('activo');
-                    modal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-
-                    if (url) {
-                        iframe.src = url;
-                        iframe.style.display = 'block';
-                        proximamente.style.display = 'none';
-                        linkEl.href = url;
-                        linkEl.style.display = 'inline-flex';
-                    } else {
-                        iframe.src = '';
-                        iframe.style.display = 'none';
-                        proximamente.style.display = 'flex';
-                        linkEl.style.display = 'none';
-                    }
-                });
-            });
-
-            function cerrarModal() {
-                modal.classList.remove('activo');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-                setTimeout(() => { iframe.src = ''; }, 300);
-            }
-
-            document.getElementById('modal-close').addEventListener('click', cerrarModal);
-            document.querySelector('.ejemplos-modal-overlay').addEventListener('click', cerrarModal);
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
-        })();
     </script>
 
     <!-- Scroll progress -->
