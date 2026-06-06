@@ -10,8 +10,8 @@
 }
 
 :root {
-    --primary-color: #c8ccd2;
-    --secondary-color: #e8ecf2;
+    --primary-color: #3a7bd5;
+    --secondary-color: #5da4e8;
     --dark-color: #080808;
     --surface-color: #111111;
     --card-color: #181818;
@@ -41,7 +41,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: #08070a;
+    background: #0a0e14;
 }
 
 @media (max-width: 480px) {
@@ -66,9 +66,9 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
     background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200, 204, 210, 0.14), transparent 60%),
-        radial-gradient(ellipse 60% 40% at 100% 30%, rgba(168, 175, 185, 0.06), transparent 70%),
-        linear-gradient(180deg, #0a0a0e 0%, #0d0d12 100%);
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(58, 123, 213, 0.18), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 30%, rgba(93, 164, 232, 0.08), transparent 70%),
+        linear-gradient(180deg, #0a0e14 0%, #0c1118 100%);
     background-attachment: fixed;
     min-height: 100vh;
     line-height: 1.6;
@@ -81,7 +81,7 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(200, 204, 210, 0.09) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(93, 164, 232, 0.1) 1px, transparent 1px);
     background-size: 26px 26px;
     pointer-events: none;
     z-index: 0;
@@ -145,7 +145,7 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 
 .btn-primary {
     background: var(--primary-color);
-    color: #0a0a0e;
+    color: #ffffff;
     padding: 13px 28px;
     font-size: 0.98rem;
     font-weight: 600;
@@ -155,8 +155,9 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(200, 204, 210, 0.25);
+    box-shadow: 0 10px 24px rgba(58, 123, 213, 0.4);
     background: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .btn-secondary {
@@ -169,7 +170,7 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 .btn-secondary:hover {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 0 20px rgba(200, 204, 210, 0.35);
+    box-shadow: 0 0 20px rgba(58, 123, 213, 0.35);
 }
 
 .btn-danger {
@@ -334,7 +335,7 @@ select:focus {
     width: 44px;
     height: 44px;
     background: rgba(8, 1, 2, 0.85);
-    border: 1px solid rgba(200, 204, 210, 0.5);
+    border: 1px solid rgba(58, 123, 213, 0.5);
     border-radius: var(--radius-md);
     color: #e8ecf0;
     backdrop-filter: blur(10px);

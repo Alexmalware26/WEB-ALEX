@@ -93,8 +93,8 @@ section h2::after {
 
 .servicio-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(200, 204, 210, 0.15);
-    border-color: rgba(200, 204, 210, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(58, 123, 213, 0.15);
+    border-color: rgba(58, 123, 213, 0.35);
 }
 
 .servicio-card i {
@@ -173,13 +173,13 @@ section h2::after {
 }
 
 .widget:hover {
-    background: rgba(200, 204, 210, 0.04);
+    background: rgba(58, 123, 213, 0.04);
 }
 
 .widget h3 {
     font-size: 2.8rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ffffff, #c8ccd2);
+    background: linear-gradient(135deg, #ffffff, #d8e4f2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -220,8 +220,8 @@ section h2::after {
 
 .enlace-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(200, 204, 210, 0.12);
-    border-color: rgba(200, 204, 210, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(58, 123, 213, 0.12);
+    border-color: rgba(58, 123, 213, 0.3);
 }
 
 .enlace-card a {
@@ -270,9 +270,9 @@ section h2::after {
 /* Info lado izquierdo */
 .contacto-tag {
     display: inline-block;
-    background: rgba(200, 204, 210, 0.12);
+    background: rgba(58, 123, 213, 0.12);
     color: var(--primary-color);
-    border: 1px solid rgba(200, 204, 210, 0.3);
+    border: 1px solid rgba(58, 123, 213, 0.3);
     padding: 5px 16px;
     border-radius: var(--radius-full);
     font-size: 0.8rem;
@@ -331,7 +331,7 @@ section h2::after {
     color: #ffffff;
     font-size: 1.3rem;
     flex-shrink: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -419,8 +419,8 @@ section h2::after {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(200, 204, 210, 0.05);
-    box-shadow: 0 0 0 3px rgba(200, 204, 210, 0.1);
+    background: rgba(58, 123, 213, 0.05);
+    box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.1);
 }
 
 .btn-full {
@@ -468,7 +468,7 @@ section h2::after {
 }
 
 .acordeon-item.abierto {
-    border-color: rgba(200, 204, 210, 0.4);
+    border-color: rgba(58, 123, 213, 0.4);
 }
 
 .acordeon-header {
@@ -494,7 +494,7 @@ section h2::after {
 }
 
 .acordeon-item.abierto .acordeon-header {
-    background: rgba(200, 204, 210, 0.08);
+    background: rgba(58, 123, 213, 0.08);
     color: white;
 }
 
@@ -654,8 +654,8 @@ section h2::after {
 
 .proyecto-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(200, 204, 210, 0.35);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(200, 204, 210, 0.1);
+    border-color: rgba(58, 123, 213, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(58, 123, 213, 0.1);
 }
 
 .proyecto-imagen {
@@ -719,7 +719,7 @@ section h2::after {
 
 .btn-ver-sitio:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(200, 204, 210, 0.45);
+    box-shadow: 0 8px 25px rgba(58, 123, 213, 0.45);
 }
 
 .proyecto-info {
@@ -747,9 +747,9 @@ section h2::after {
 }
 
 .proyecto-tags span {
-    background: rgba(200, 204, 210, 0.1);
+    background: rgba(58, 123, 213, 0.1);
     color: var(--primary-color);
-    border: 1px solid rgba(200, 204, 210, 0.25);
+    border: 1px solid rgba(58, 123, 213, 0.25);
     padding: 2px 8px;
     border-radius: var(--radius-full);
     font-size: 0.7rem;
@@ -1033,7 +1033,7 @@ section h2::after {
     left: -20%;
     width: 140%;
     height: 80%;
-    background: radial-gradient(ellipse at center, rgba(200, 204, 210, 0.06) 0%, transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(58, 123, 213, 0.06) 0%, transparent 60%);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -1041,9 +1041,9 @@ section h2::after {
 }
 
 .faq-item:hover {
-    border-color: rgba(200, 204, 210, 0.35);
+    border-color: rgba(58, 123, 213, 0.35);
     transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(200, 204, 210, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(58, 123, 213, 0.08);
 }
 
 .faq-item:hover::after,
@@ -1052,8 +1052,8 @@ section h2::after {
 }
 
 .faq-item.abierto {
-    border-color: rgba(200, 204, 210, 0.45);
-    box-shadow: 0 12px 35px rgba(200, 204, 210, 0.15);
+    border-color: rgba(58, 123, 213, 0.45);
+    box-shadow: 0 12px 35px rgba(58, 123, 213, 0.15);
 }
 
 .faq-pregunta {
@@ -1078,11 +1078,11 @@ section h2::after {
 }
 
 .faq-pregunta:hover {
-    background: rgba(200, 204, 210, 0.04);
+    background: rgba(58, 123, 213, 0.04);
 }
 
 .faq-item.abierto .faq-pregunta {
-    background: rgba(200, 204, 210, 0.07);
+    background: rgba(58, 123, 213, 0.07);
     color: white;
 }
 
@@ -1093,8 +1093,8 @@ section h2::after {
     width: 32px;
     height: 32px;
     color: var(--primary-color);
-    background: rgba(200, 204, 210, 0.1);
-    border: 1px solid rgba(200, 204, 210, 0.2);
+    background: rgba(58, 123, 213, 0.1);
+    border: 1px solid rgba(58, 123, 213, 0.2);
     border-radius: 50%;
     font-size: 0.7rem;
     transition: var(--transition-base);
@@ -1102,8 +1102,8 @@ section h2::after {
 }
 
 .faq-item:hover .faq-icon {
-    background: rgba(200, 204, 210, 0.18);
-    border-color: rgba(200, 204, 210, 0.35);
+    background: rgba(58, 123, 213, 0.18);
+    border-color: rgba(58, 123, 213, 0.35);
 }
 
 .faq-item.abierto .faq-icon {
@@ -1111,7 +1111,7 @@ section h2::after {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-color: transparent;
     color: white;
-    box-shadow: 0 6px 16px rgba(200, 204, 210, 0.35);
+    box-shadow: 0 6px 16px rgba(58, 123, 213, 0.35);
 }
 
 .faq-respuesta {
@@ -1133,7 +1133,7 @@ section h2::after {
     font-size: 0.95rem;
     line-height: 1.7;
     margin: 0;
-    border-top: 1px solid rgba(200, 204, 210, 0.1);
+    border-top: 1px solid rgba(58, 123, 213, 0.1);
     padding-top: 1.1rem;
     margin: 0 1.6rem;
     padding-left: 0;
@@ -1148,7 +1148,7 @@ section h2::after {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 300px;
-    background: radial-gradient(ellipse, rgba(200, 204, 210, 0.15) 0%, transparent 65%);
+    background: radial-gradient(ellipse, rgba(58, 123, 213, 0.15) 0%, transparent 65%);
     pointer-events: none;
 }
 
@@ -1369,8 +1369,8 @@ section h2::after {
 
 .faq-search:focus {
     outline: none;
-    border-color: rgba(200, 204, 210, 0.5);
-    box-shadow: 0 0 0 3px rgba(200, 204, 210, 0.1);
+    border-color: rgba(58, 123, 213, 0.5);
+    box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.1);
 }
 
 .faq-search::placeholder {
@@ -1429,8 +1429,8 @@ section h2::after {
     color: var(--primary-color);
     letter-spacing: 1px;
     flex-shrink: 0;
-    background: rgba(200, 204, 210, 0.12);
-    border: 1px solid rgba(200, 204, 210, 0.2);
+    background: rgba(58, 123, 213, 0.12);
+    border: 1px solid rgba(58, 123, 213, 0.2);
     padding: 4px 9px;
     border-radius: var(--radius-sm);
     font-family: 'Courier New', monospace;
@@ -1445,8 +1445,8 @@ section h2::after {
 .faq-cat-icon {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, rgba(200, 204, 210, 0.15), rgba(232, 236, 242, 0.05));
-    border: 1px solid rgba(200, 204, 210, 0.25);
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.15), rgba(93, 164, 232, 0.05));
+    border: 1px solid rgba(58, 123, 213, 0.25);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1462,8 +1462,8 @@ section h2::after {
 }
 
 .faq-item.abierto .faq-cat-icon {
-    background: linear-gradient(135deg, rgba(200, 204, 210, 0.3), rgba(232, 236, 242, 0.15));
-    border-color: rgba(200, 204, 210, 0.45);
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.3), rgba(93, 164, 232, 0.15));
+    border-color: rgba(58, 123, 213, 0.45);
 }
 
 /* FAQ empty state */
@@ -1554,7 +1554,7 @@ section h2::after {
 .faq-contact-inner input:focus,
 .faq-contact-inner textarea:focus {
     outline: none;
-    border-color: rgba(200, 204, 210, 0.5);
+    border-color: rgba(58, 123, 213, 0.5);
 }
 
 .faq-contact-inner input::placeholder,
@@ -1751,7 +1751,7 @@ section h2::after {
 .proyecto-detalle-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(200, 204, 210, 0.75);
+    background: rgba(58, 123, 213, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1812,7 +1812,7 @@ section h2::after {
 }
 
 .pd-bloque {
-    border-left: 2px solid rgba(200, 204, 210, 0.3);
+    border-left: 2px solid rgba(58, 123, 213, 0.3);
     padding-left: 1rem;
 }
 
@@ -2022,9 +2022,9 @@ section h2::after {
 
 .sobre-mi-tag {
     display: inline-block;
-    background: rgba(200, 204, 210, 0.12);
+    background: rgba(58, 123, 213, 0.12);
     color: var(--primary-color);
-    border: 1px solid rgba(200, 204, 210, 0.3);
+    border: 1px solid rgba(58, 123, 213, 0.3);
     padding: 5px 16px;
     border-radius: var(--radius-full);
     font-size: 0.78rem;
@@ -2180,7 +2180,7 @@ section h2::after {
     left: -20%;
     width: 140%;
     height: 80%;
-    background: radial-gradient(ellipse at center, rgba(200, 204, 210, 0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(58, 123, 213, 0.08) 0%, transparent 60%);
     pointer-events: none;
     opacity: 0.7;
     transition: opacity 0.4s ease;
@@ -2270,17 +2270,17 @@ section h2::after {
     height: 56px;
     font-size: 1.4rem;
     color: var(--primary-color);
-    background: linear-gradient(135deg, rgba(200, 204, 210, 0.15), rgba(232, 236, 242, 0.05));
-    border: 1px solid rgba(200, 204, 210, 0.25);
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.15), rgba(93, 164, 232, 0.05));
+    border: 1px solid rgba(58, 123, 213, 0.25);
     border-radius: 14px;
     margin-bottom: 1.1rem;
-    box-shadow: 0 8px 20px rgba(200, 204, 210, 0.1);
+    box-shadow: 0 8px 20px rgba(58, 123, 213, 0.1);
     transition: var(--transition-base);
 }
 
 .precio-card:hover .precio-header i {
     transform: rotate(-6deg) scale(1.08);
-    box-shadow: 0 12px 25px rgba(200, 204, 210, 0.25);
+    box-shadow: 0 12px 25px rgba(58, 123, 213, 0.25);
 }
 
 .precio-header h3 {
@@ -2376,7 +2376,7 @@ section h2::after {
     width: 20px;
     height: 20px;
     color: var(--primary-color);
-    background: rgba(200, 204, 210, 0.12);
+    background: rgba(58, 123, 213, 0.12);
     border-radius: 50%;
     font-size: 0.65rem;
     flex-shrink: 0;
@@ -2392,7 +2392,7 @@ section h2::after {
     display: block;
     text-align: center;
     background: transparent;
-    border: 1px solid rgba(200, 204, 210, 0.3);
+    border: 1px solid rgba(58, 123, 213, 0.3);
     color: var(--text-bright);
     padding: 12px 20px;
     border-radius: var(--radius-full);
@@ -2420,15 +2420,15 @@ section h2::after {
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0);
     box-shadow:
-        24px -22px 0 rgba(200, 204, 210, 0.9),
+        24px -22px 0 rgba(58, 123, 213, 0.9),
         -28px -18px 0 rgba(255, 255, 255, 0.85),
-        32px 18px 0 rgba(232, 236, 242, 0.9),
+        32px 18px 0 rgba(93, 164, 232, 0.9),
         -22px 24px 0 rgba(255, 255, 255, 0.8),
-        40px -6px 0 rgba(200, 204, 210, 0.7),
-        -38px 8px 0 rgba(232, 236, 242, 0.7),
+        40px -6px 0 rgba(58, 123, 213, 0.7),
+        -38px 8px 0 rgba(93, 164, 232, 0.7),
         14px -32px 0 rgba(255, 255, 255, 0.75),
-        -14px 30px 0 rgba(200, 204, 210, 0.75);
-    filter: drop-shadow(0 0 4px rgba(200, 204, 210, 0.9));
+        -14px 30px 0 rgba(58, 123, 213, 0.75);
+    filter: drop-shadow(0 0 4px rgba(58, 123, 213, 0.9));
 }
 
 /* Rayos diagonales que cruzan el botón al hacer hover */
@@ -2441,7 +2441,7 @@ section h2::after {
     opacity: 0;
     background:
         linear-gradient(75deg, transparent 38%, rgba(255, 255, 255, 0.85) 50%, transparent 62%),
-        linear-gradient(105deg, transparent 38%, rgba(200, 204, 210, 0.8) 50%, transparent 62%);
+        linear-gradient(105deg, transparent 38%, rgba(58, 123, 213, 0.8) 50%, transparent 62%);
     mix-blend-mode: screen;
     filter: blur(0.5px);
 }
@@ -2469,20 +2469,20 @@ section h2::after {
 .btn-precio:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-color: transparent;
-    color: #0a0a0e;
-    box-shadow: 0 12px 30px rgba(200, 204, 210, 0.25), 0 0 30px rgba(200, 204, 210, 0.3);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(58, 123, 213, 0.35), 0 0 30px rgba(58, 123, 213, 0.3);
     transform: translateY(-2px);
 }
 
 .precio-destacado .btn-precio {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-color: transparent;
-    color: #0a0a0e;
+    color: #ffffff;
 }
 
 .precio-destacado .btn-precio:hover {
     filter: brightness(1.1);
-    box-shadow: 0 8px 25px rgba(200, 204, 210, 0.3);
+    box-shadow: 0 8px 25px rgba(58, 123, 213, 0.3);
 }
 
 .precios-nota {
@@ -2512,7 +2512,7 @@ section h2::after {
 
 .comparador-toggle {
     background: rgba(10, 11, 14, 0.7);
-    border: 1px solid rgba(200, 204, 210, 0.45);
+    border: 1px solid rgba(58, 123, 213, 0.45);
     color: #ffffff;
     padding: 12px 24px;
     border-radius: var(--radius-full);
@@ -2548,10 +2548,10 @@ section h2::after {
 }
 
 .comparador-toggle:hover {
-    background: rgba(200, 204, 210, 0.12);
-    border-color: rgba(200, 204, 210, 0.4);
+    background: rgba(58, 123, 213, 0.12);
+    border-color: rgba(58, 123, 213, 0.4);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(200, 204, 210, 0.18);
+    box-shadow: 0 8px 20px rgba(58, 123, 213, 0.18);
 }
 
 .comparador-toggle.open .comp-toggle-icon {
@@ -2590,13 +2590,13 @@ section h2::after {
 }
 
 .comparador-tabla thead th {
-    background: rgba(200, 204, 210, 0.08);
+    background: rgba(58, 123, 213, 0.08);
     padding: 1.1rem 1rem;
     text-align: center;
     color: var(--text-bright);
     font-weight: 700;
     font-size: 0.95rem;
-    border-bottom: 2px solid rgba(200, 204, 210, 0.25);
+    border-bottom: 2px solid rgba(58, 123, 213, 0.25);
     white-space: nowrap;
 }
 
@@ -2607,7 +2607,7 @@ section h2::after {
 
 .comparador-tabla th.comp-feat-col {
     text-align: left;
-    background: rgba(200, 204, 210, 0.04);
+    background: rgba(58, 123, 213, 0.04);
     min-width: 260px;
 }
 
@@ -2633,7 +2633,7 @@ section h2::after {
     text-transform: uppercase;
     padding: 0.85rem 1rem;
     text-align: left;
-    border-bottom: 1px solid rgba(200, 204, 210, 0.15);
+    border-bottom: 1px solid rgba(58, 123, 213, 0.15);
 }
 
 .comparador-tabla tr.comp-cat td i {
@@ -2642,7 +2642,7 @@ section h2::after {
 }
 
 .comparador-tabla tbody tr:not(.comp-cat):hover td {
-    background: rgba(200, 204, 210, 0.04);
+    background: rgba(58, 123, 213, 0.04);
 }
 
 .comparador-tabla .yes {
@@ -2764,7 +2764,7 @@ section h2::after {
     gap: 0.5rem;
     font-weight: 700;
     font-size: 0.9rem;
-    box-shadow: 0 4px 20px rgba(200, 204, 210, 0.4);
+    box-shadow: 0 4px 20px rgba(58, 123, 213, 0.4);
     transition: var(--transition-base);
 }
 
@@ -2775,7 +2775,7 @@ section h2::after {
 
 .whatsapp-btn:hover {
     transform: translateY(-3px) scale(1.04);
-    box-shadow: 0 8px 30px rgba(200, 204, 210, 0.55);
+    box-shadow: 0 8px 30px rgba(58, 123, 213, 0.55);
     filter: brightness(1.1);
 }
 
