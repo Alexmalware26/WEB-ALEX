@@ -41,7 +41,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: #0a0101;
+    background: #08070a;
 }
 
 @media (max-width: 480px) {
@@ -65,7 +65,11 @@ html {
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
-    background: transparent;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(220, 0, 32, 0.18), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 30%, rgba(220, 0, 32, 0.06), transparent 70%),
+        linear-gradient(180deg, #08070a 0%, #0c0608 100%);
+    background-attachment: fixed;
     min-height: 100vh;
     line-height: 1.6;
     padding-top: 80px;
@@ -85,53 +89,6 @@ body {
     100% {
         background-position: 0% 50%;
         filter: brightness(0.85);
-    }
-}
-
-#smoke-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 1;
-    display: block;
-}
-
-/* Overlay oscuro sutil sobre el humo para mejorar legibilidad del contenido */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.22);
-    z-index: 2;
-    pointer-events: none;
-}
-
-/* Compensar el zoom del html para que el canvas cubra el viewport real */
-@media (max-width: 480px) {
-    #smoke-bg {
-        zoom: 1.2195;
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    #smoke-bg {
-        zoom: 1.1363;
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
-@media (min-width: 1024px) {
-    #smoke-bg {
-        zoom: 1.333333;
-        width: 100vw;
-        height: 100vh;
     }
 }
 
@@ -161,16 +118,19 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
-    padding: 12px 32px;
-    font-size: 1rem;
+    padding: 13px 28px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    border: 1px solid var(--primary-color);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.45);
-    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(220, 0, 32, 0.35);
+    background: #f3082c;
 }
 
 .btn-secondary {
