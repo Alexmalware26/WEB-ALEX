@@ -73,6 +73,32 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     padding-top: 80px;
+    position: relative;
+}
+
+/* Grid de puntos sutil que da textura "premium" — se difumina hacia los bordes */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(200, 204, 210, 0.09) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at center, black 0%, transparent 90%);
+    mask-image: radial-gradient(ellipse 70% 60% at center, black 0%, transparent 90%);
+}
+
+/* Capa de ruido SVG muy sutil para textura tipo "papel grano" */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
 }
 
 @keyframes animatedGradient {
