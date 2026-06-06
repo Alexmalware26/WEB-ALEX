@@ -97,17 +97,76 @@ section h2::after {
     border-color: rgba(58, 123, 213, 0.35);
 }
 
-.servicio-card i {
-    font-size: 2.8rem;
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 1rem;
-    display: block;
-    transition: var(--transition-base);
+/* Icono cápsula a color para cada servicio */
+.servicio-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.servicio-card:hover i {
-    color: white;
-    transform: scale(1.05);
+.servicio-card:hover .servicio-icon {
+    transform: translateY(-3px) scale(1.04);
+}
+
+/* Webs profesionales: azul corporativo */
+.icon-web {
+    background: linear-gradient(135deg, #3a7bd5, #5da4e8);
+    box-shadow: 0 8px 20px rgba(58, 123, 213, 0.3);
+}
+.servicio-card:hover .icon-web {
+    box-shadow: 0 12px 28px rgba(58, 123, 213, 0.45);
+}
+
+/* Tiendas online: verde dinero */
+.icon-tienda {
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+.servicio-card:hover .icon-tienda {
+    box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45);
+}
+
+/* CRM personalizado: púrpura */
+.icon-crm {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+.servicio-card:hover .icon-crm {
+    box-shadow: 0 12px 28px rgba(139, 92, 246, 0.45);
+}
+
+/* Automatizaciones: ámbar/dorado */
+.icon-auto {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+.servicio-card:hover .icon-auto {
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.45);
+}
+
+/* Mantenimiento web: cyan/teal */
+.icon-mantenimiento {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+}
+.servicio-card:hover .icon-mantenimiento {
+    box-shadow: 0 12px 28px rgba(6, 182, 212, 0.45);
+}
+
+/* SEO y rendimiento: rosa fucsia */
+.icon-seo {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+}
+.servicio-card:hover .icon-seo {
+    box-shadow: 0 12px 28px rgba(236, 72, 153, 0.45);
 }
 
 .servicio-card h3 {
