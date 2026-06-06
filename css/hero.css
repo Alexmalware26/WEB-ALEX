@@ -5,9 +5,8 @@
 .hero {
     background: transparent;
     color: white;
-    padding: 160px 24px 140px;
+    padding: 110px 24px 80px;
     text-align: center;
-    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
