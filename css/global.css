@@ -10,13 +10,13 @@
 }
 
 :root {
-    --primary-color: #dc0020;
-    --secondary-color: #ff1430;
+    --primary-color: #c8ccd2;
+    --secondary-color: #e8ecf2;
     --dark-color: #080808;
     --surface-color: #111111;
     --card-color: #181818;
     --light-color: #222222;
-    --text-color: #c4b8b8;
+    --text-color: #b8bcc4;
     --text-bright: #ffffff;
     --border-color: #2a2a2a;
     --error-color: #ff3b3b;
@@ -66,9 +66,9 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     color: var(--text-color);
     background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(220, 0, 32, 0.18), transparent 60%),
-        radial-gradient(ellipse 60% 40% at 100% 30%, rgba(220, 0, 32, 0.06), transparent 70%),
-        linear-gradient(180deg, #08070a 0%, #0c0608 100%);
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200, 204, 210, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 30%, rgba(168, 175, 185, 0.06), transparent 70%),
+        linear-gradient(180deg, #0a0a0e 0%, #0d0d12 100%);
     background-attachment: fixed;
     min-height: 100vh;
     line-height: 1.6;
@@ -119,7 +119,7 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 
 .btn-primary {
     background: var(--primary-color);
-    color: white;
+    color: #0a0a0e;
     padding: 13px 28px;
     font-size: 0.98rem;
     font-weight: 600;
@@ -129,8 +129,8 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(220, 0, 32, 0.35);
-    background: #f3082c;
+    box-shadow: 0 10px 24px rgba(200, 204, 210, 0.25);
+    background: var(--secondary-color);
 }
 
 .btn-secondary {
@@ -143,7 +143,7 @@ section, footer, .navbar, .whatsapp-btn, .acordeon-section {
 .btn-secondary:hover {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 0 20px rgba(225, 29, 72, 0.35);
+    box-shadow: 0 0 20px rgba(200, 204, 210, 0.35);
 }
 
 .btn-danger {
@@ -308,9 +308,9 @@ select:focus {
     width: 44px;
     height: 44px;
     background: rgba(8, 1, 2, 0.85);
-    border: 1px solid rgba(220, 0, 32, 0.5);
+    border: 1px solid rgba(200, 204, 210, 0.5);
     border-radius: var(--radius-md);
-    color: #ffeaea;
+    color: #e8ecf0;
     backdrop-filter: blur(10px);
     font-size: 1rem;
     cursor: pointer;
