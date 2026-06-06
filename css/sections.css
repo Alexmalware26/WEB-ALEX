@@ -354,12 +354,11 @@ section h2::after {
 }
 
 .contacto-info > p {
-    color: #2a3447;
+    color: #5a6478;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 2.5rem;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 1);
 }
 
 .contacto-items {
@@ -434,10 +433,9 @@ section h2::after {
 }
 
 .contacto-item span {
-    color: #2a3447;
+    color: #5a6478;
     font-weight: 500;
     font-size: 0.9rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 /* Formulario lado derecho */
@@ -1255,11 +1253,10 @@ section h2::after {
 }
 
 .footer-brand p {
-    color: #2a3447;
+    color: #5a6478;
     font-weight: 500;
     font-size: 0.95rem;
     line-height: 1.6;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .footer-social h4 {
@@ -1303,12 +1300,11 @@ section h2::after {
 }
 
 .footer-links a {
-    color: #2a3447;
+    color: #5a6478;
     font-weight: 500;
     text-decoration: none;
     font-size: 0.9rem;
     transition: var(--transition-base);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .footer-links a:hover {
@@ -1320,9 +1316,8 @@ section h2::after {
     padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
-    color: #2a3447;
+    color: #5a6478;
     font-weight: 500;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 /* ── FAQ page ── */
@@ -1989,11 +1984,65 @@ section h2::after {
     transition: var(--transition-base);
 }
 
-.footer-icons a:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
+.footer-icons a {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-icons a i {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-icons a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1;
+}
+
+/* LinkedIn: azul oficial #0A66C2 */
+.social-linkedin:hover {
+    border-color: #0A66C2;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4);
+}
+
+.social-linkedin::before {
+    background: linear-gradient(135deg, #0A66C2, #0084d8);
+}
+
+.social-linkedin:hover::before {
+    transform: scale(1);
+}
+
+.social-linkedin:hover i {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+/* GitHub: negro oficial #181717 */
+.social-github:hover {
+    border-color: #181717;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(24, 23, 23, 0.4);
+}
+
+.social-github::before {
+    background: linear-gradient(135deg, #24292e, #181717);
+}
+
+.social-github:hover::before {
+    transform: scale(1);
+}
+
+.social-github:hover i {
+    transform: scale(1.15) rotate(360deg);
 }
 
 /* ── Sobre mí ── */
@@ -2538,14 +2587,13 @@ section h2::after {
 
 .precios-nota {
     text-align: center;
-    color: #2a3447;
+    color: #5a6478;
     font-size: 0.85rem;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .precios-nota i {
@@ -2578,7 +2626,6 @@ section h2::after {
     letter-spacing: 0.3px;
     backdrop-filter: none;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .comp-toggle-text {
